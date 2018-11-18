@@ -1,0 +1,183 @@
+.guide_container{
+    width:1200px;
+    margin:0 auto;
+}
+h1{
+    font-size: 45px;
+    color:#333333;
+    width:100%;
+    text-align: center;
+    padding-bottom:46px;
+}
+.what_text{
+    line-height: 36px;
+    padding:0 20px;
+    font-size: 18px;
+    color:#454545;
+}
+.what_img{
+    text-align: center;
+    padding:42px 0 64px 0;
+}
+.count_area{
+    padding:0 27px 0 60px;
+}
+.count_area table{
+    width:100%;
+}
+table td{
+    text-align: center;
+}
+table tr:nth-of-type(1){
+    font-size: 18px;
+    color:#454545;
+    line-height: 40px;
+
+}
+table tr:nth-of-type(2){
+    font-size: 36px;
+    color:#ff6161;
+    font-weight: bolder;
+    line-height: 46px;
+}
+table td{
+    border-right:1px solid #bfbfbf;
+}
+table tr td:last-child{
+    border:0;
+}
+div[class^=title_area]{
+    width:100%;
+    padding:96px 0;
+    position: relative;
+}
+h2[class^=title]{
+    font-size: 18px;
+    line-height: 38px;
+    height:38px;
+    width:156px;
+    text-align: center;
+    margin:0 auto;
+    color:#7d7d7d;
+    border:1px solid #dedede;
+}
+
+div[class^=title_area]:before,div[class^=title_area]:after{
+    content:'';
+    height:1px;
+    width:490px;
+    position: absolute;
+    top:50%;
+    border-top:1px solid #dedede;
+}
+div[class^=title_area]:before{
+    left:0;
+}
+div[class^=title_area]:after{
+    right:0;
+}
+.link_area{
+    padding:70px 27px 0 60px;
+}
+
+.link_area  a{
+    display: inline-block;
+    float: left;
+    margin-right: 174px;
+}
+.link_area  a:last-child{
+    margin-right: 0;
+}
+.step_nav{
+   padding-left: 28px;
+}
+.step_nav li{
+    width:218px;
+    height:116px;
+    float: left;
+    margin-right: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.step_nav li:nth-of-type(1){
+ background-image:url(/img/guide/zc_nav.png);
+}
+.step_nav li:nth-of-type(2){
+    background-image:url(/img/guide/rz_nav.png);
+}
+.step_nav li:nth-of-type(3){
+    background-image:url(/img/guide/cz_nav.png);
+}
+.step_nav li:nth-of-type(4){
+    background-image:url(/img/guide/tz_nav.png);
+}
+.step_nav li:nth-of-type(5){
+    background-image:url(/img/guide/sk_nav.png);
+}
+.step_nav li.nav0{
+    background-image:url(/img/guide/zc-icon.png);
+}
+.step_nav li.nav1{
+    background-image:url(/img/guide/rz-icon.png);
+}
+.step_nav li.nav2{
+    background-image:url(/img/guide/cz-icon.png);
+}
+.step_nav li.nav3{
+    background-image:url(/img/guide/tz-icon.png);
+}
+.step_nav li.nav4{
+    background-image:url(/img/guide/sk-icon.png);
+}
+.content_wrap{
+    width:100%;
+    padding-top:66px;
+    position: relative;
+}
+.pre,.next{
+    width:76px;
+    height:194px;
+    position: absolute;
+    top:225px;
+    cursor: pointer;
+}
+.pre{
+    left:86px;
+}
+.next{
+    right:86px;
+}
+.contetn_area{
+    margin:0 auto;
+    width:800px;
+    overflow: hidden;
+    height:632px;
+    padding:0 16px;
+    position: relative;
+}
+
+.step_content{
+    width:4000px;
+    height:632px;
+    position: absolute;
+    left:0;
+    transition: 0.5s ease-in-out;
+}
+.step_content li{
+    width:768px;
+    margin:0 16px;
+    float: left;
+}
+.register_guide{
+    display: block;
+    height:50px;
+    color:#fff;
+    font-size: 20px;
+    background: #ff5b5b;
+    width:228px;
+    margin:43px auto 59px;
+    border-radius: 4px;
+    line-height: 50px;
+    text-align: center;
+}

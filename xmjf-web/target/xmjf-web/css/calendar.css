@@ -1,0 +1,212 @@
+.calendar{
+    width:960px;
+    min-height:1440px;
+    padding: 8px 0 0  0px;
+    background: #fff;
+}
+.calendar h2{
+    height:70px;
+    line-height: 70px;
+    font-size:22px;
+    color:#767676;
+    font-weight: normal;
+    text-indent: 54px;
+}
+.date_area{
+    width:100%;
+    padding:0 110px 0 78px;
+    position: relative;
+}
+.title{
+    font-size:24px;
+    text-align: center;
+    border-bottom: 1px solid #e3e3e3;
+    height:104px;
+    width:100%;
+    line-height:104px;
+    background: url(/img/calendar.png) no-repeat right 242px top 38px;
+    color:#5e5d5d;
+}
+.calendar_show table{
+    width:100%;
+    padding-top: 37px;
+    font-size: 20px;
+}
+.calendar_show thead tr{
+    height:90px;
+    color: #b2b2b2;
+}
+.calendar_show tbody tr{
+    padding-bottom: 16px;
+    height:76px;
+    color:#5e5d5d;
+    line-height: 60px;
+}
+.calendar_show tbody td{
+    text-align: center;
+    position: relative;
+    z-index:1;
+}
+
+.invest:after{
+    content:'';
+    position: absolute;
+    width:60px;
+    height:60px;
+    left:50%;
+    margin-left:-30px;
+    border-radius:50%;
+    border:3px solid #e05353;
+    box-sizing: border-box;
+}
+.money:after{
+    content:'';
+    position: absolute;
+    width:60px;
+    height:60px;
+    left:50%;
+    margin-left:-30px;
+    border-radius:50%;
+    border:3px solid #60d1fb;
+    box-sizing: border-box;
+}
+.today{
+    color:#fff;
+}
+.today:after{
+    content:'';
+    position: absolute;
+    width:60px;
+    height:60px;
+    left:50%;
+    margin-left:-30px;
+    border-radius:50%;
+    border-right:3px solid #f18a12!important;
+    border-bottom:3px solid #f18a12!important;
+    border-left:3px solid #f18a12!important;
+    border-top:3px solid #f18a12!important;
+    box-sizing: border-box;
+    background: #f18a12;
+    z-index:-1;
+
+}
+.money-invest:after{
+    content:'';
+    position: absolute;
+    width:60px;
+    height:60px;
+    left:50%;
+    top:3px;
+    margin-left:-30px;
+    border-radius:50%;
+    border-right:3px solid #60d1fb;
+    border-bottom:3px solid #60d1fb;
+    border-left:3px solid #e05353;
+    border-top:3px solid #e05353;
+    box-sizing: border-box;
+    transform: rotate(-45deg);
+}
+
+.info{
+    height:156px;
+    font-size:18px;
+    color:#707071;
+    margin:0 120px 0 90px;
+    border-bottom:1px solid #e3e3e3;
+}
+
+.info div{
+    float: left;
+    width:50%;
+    position: relative;
+    height:156px;
+    padding:82px 0 32px 0;
+    line-height:42px;
+    text-align: center;
+}
+.info div:before{
+    content:'';
+    position: absolute;
+    width:46px;
+    height:46px;
+    left:50%;
+    top:36px;
+    margin-left:-23px;
+    border-radius:50%;
+    box-sizing: border-box;
+}
+.info .hasInvestItem:before{
+    border:3px solid #e05353;
+}
+.info .hasMoneyItem:before{
+    border:3px solid #60d1fb;
+}
+.detailItem{
+    padding-top: 16px;
+    width:100%;
+    font-size:18px;
+    text-align: center;
+    line-height:66px;
+    color:#5e5d5d;
+
+}
+.bottomTable{
+    width:760px;
+    margin:0 auto;
+    table-layout:fixed;
+    color:#989898;
+    border-collapse :collapse;
+    border-spacing :0;
+    font-size:18px;
+
+}
+.bottomTable td{
+    text-align: center;
+    width:33.3%;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.bottomTable th{
+    background: #f6f6f6;
+    font-weight:normal ;
+    color:#707071;
+    line-height: 58px;
+}
+.bottomTable tbody tr{
+    height:40px;
+}
+.bottomTable .margin16{
+    height:16px;
+}
+.leftbutton,.rightbutton{
+    display: inline-block;
+    width:40px;
+    height:25px;
+    position: relative;
+}
+.leftbutton:after,.rightbutton:after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent #bababa;
+    border-style: solid;
+    top: 10px;
+}
+.leftbutton:after{
+    border-width: 8px 15px 8px 0;
+    right: 12px;
+}
+.rightbutton:after{
+    border-width: 8px 0 8px 15px;
+    left: 10px;
+}
+.pickDate{
+    width:34px;
+    height:34px;
+    position: absolute;
+    right:352px;
+    top:38px;
+}

@@ -1,0 +1,59 @@
+body{
+    background: #fff;
+}
+.quality-title{
+    width: 100%;
+    height: 80px;
+    border-bottom: solid 1px #ececec;
+    text-align: center;
+}
+.quality-title a{
+    width: 174px;
+    height: 80px;
+    font-size: 24px;
+    color: #595858;
+    line-height: 80px;
+    text-align: center;
+    display: inline-block;
+}
+div[class^=Sblock_]{
+    width:100%;
+}
+div[class^=Scontent_]{
+    width:1200px;
+    margin:0 auto;
+    padding: 82px 0;
+}
+div[class^=Scontent_] .picture{
+    width:473px;
+    float: left;
+}
+div[class^=Scontent_] .text{
+    width:727px;
+    float: left;
+}
+div[class^=Scontent_] .text h2{
+    color:#484848;
+    font-size: 36px;
+    line-height: 80px;
+}
+div[class^=Scontent_] .text h3{
+    color:#373737;
+    font-size: 25px;
+    line-height: 48px;
+}
+div[class^=Scontent_] .text p{
+    color:#747474;
+    font-size: 16px;
+    line-height: 38px;
+}
+.Sblock_cash,.Sblock_invest{
+    background: #fff;
+}
+.Sblock_info{
+    background: #f7f7f7;
+
+}
+.Sblock_invest{
+    padding-bottom: 30px;
+}

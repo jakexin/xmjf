@@ -1,0 +1,67 @@
+.content {
+    background: #ffffff;
+    width: 960px;
+    min-height: 1440px;
+}
+
+.redPackets-top {
+    width: 100%;
+    height: 216px;
+}
+
+.redPackets-title {
+    width: 100%;
+    height: 80px;
+}
+
+.redPackets-title-left {
+    width: 196px;
+    height: 80px;
+    float: left;
+    line-height: 80px;
+    color: #767676;
+    text-align: center;
+    font-size: 22px;
+    padding-left: 27px;
+}
+.auto-prompt{
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    color: #ff5555;
+    padding-left: 68px;
+}
+.auto-but{
+    width: 846px;
+    height: 48px;
+    margin: 36px auto;
+}
+.button{
+    width: 128px;
+    height: 48px;
+    border: solid 1px #38a0e9;
+    font-size: 16px;
+    color: #38a0e9;
+    background: #ffffff;
+    border-radius: 5px;
+    float: right;
+    cursor:pointer;
+}
+.message-table{
+    width: 846px;
+    height: auto;
+    margin: 0 auto;
+}
+.checkbox{
+    width: 18px;
+    height: 17px;
+    display: block;
+    background:url(../img/xuan-icon.png)  no-repeat;
+    cursor: pointer;
+    margin-right:5px;
+
+}
+.checked{
+    background:url(../img/xuanicon.png) no-repeat;
+
+}

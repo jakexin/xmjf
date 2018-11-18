@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shsxt.xmjf.server.db.dao.BusAccountMapper" >
+  <resultMap id="BaseResultMap" type="com.shsxt.xmjf.api.po.BusAccount" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="total" property="total" jdbcType="DECIMAL" />
+    <result column="usable" property="usable" jdbcType="DECIMAL" />
+    <result column="cash" property="cash" jdbcType="DECIMAL" />
+    <result column="frozen" property="frozen" jdbcType="DECIMAL" />
+    <result column="wait" property="wait" jdbcType="DECIMAL" />
+    <result column="repay" property="repay" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, user_id, total, usable, cash, frozen, wait, repay
+  </sql>
+  <select id="queryById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from bus_account
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <insert id="insert" parameterType="com.shsxt.xmjf.api.po.BusAccount" >
+    insert into bus_account
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="total != null" >
+        total,
+      </if>
+      <if test="usable != null" >
+        usable,
+      </if>
+      <if test="cash != null" >
+        cash,
+      </if>
+      <if test="frozen != null" >
+        frozen,
+      </if>
+      <if test="wait != null" >
+        wait,
+      </if>
+      <if test="repay != null" >
+        repay,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="total != null" >
+        #{total,jdbcType=DECIMAL},
+      </if>
+      <if test="usable != null" >
+        #{usable,jdbcType=DECIMAL},
+      </if>
+      <if test="cash != null" >
+        #{cash,jdbcType=DECIMAL},
+      </if>
+      <if test="frozen != null" >
+        #{frozen,jdbcType=DECIMAL},
+      </if>
+      <if test="wait != null" >
+        #{wait,jdbcType=DECIMAL},
+      </if>
+      <if test="repay != null" >
+        #{repay,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="update" parameterType="com.shsxt.xmjf.api.po.BusAccount" >
+    update bus_account
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="total != null" >
+        total = #{total,jdbcType=DECIMAL},
+      </if>
+      <if test="usable != null" >
+        usable = #{usable,jdbcType=DECIMAL},
+      </if>
+      <if test="cash != null" >
+        cash = #{cash,jdbcType=DECIMAL},
+      </if>
+      <if test="frozen != null" >
+        frozen = #{frozen,jdbcType=DECIMAL},
+      </if>
+      <if test="wait != null" >
+        wait = #{wait,jdbcType=DECIMAL},
+      </if>
+      <if test="repay != null" >
+        repay = #{repay,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+   <select id="queryBusAccountByUserId" resultMap="BaseResultMap">
+      select <include refid="Base_Column_List"/>
+      from bus_account
+      where user_id=#{userId}
+   </select>
+
+  <select id="queryBusAccountInfoByUserId" resultType="map">
+        select
+           a.total "总资产",
+           a.usable "可用金额",
+           a.cash  "可提现金额",
+           a.frozen "冻结金额",
+           a.wait "代收本金",
+           a.repay "代还金额",
+           i.wait_income "代收利息"
+        FROM
+            bus_account a
+        LEFT JOIN bus_income_stat i ON a.user_id = i.user_id
+        WHERE
+            a.user_id = #{userId}
+  </select>
+
+</mapper>

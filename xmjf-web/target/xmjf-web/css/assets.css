@@ -1,0 +1,115 @@
+.assets{
+    width:960px;
+    min-height:1440px;
+    padding: 0 32px;
+    background: #fff;
+}
+.assets h2{
+    font-size:22px;
+    color:#767676;
+    line-height: 84px;
+    font-weight: normal;
+    text-indent: 24px;
+}
+.assets_detail{
+    border-bottom: 1px dashed #c5c5c5;
+    position: relative;
+}
+.center_text{
+    color:#767676;
+    position: absolute;
+    width:210px;
+    top:200px;
+    left:345px;
+    z-index:9999;
+    text-align: center;
+
+}
+.center_text .num{
+    font-size: 22px;
+    line-height: 110px;
+
+}
+.center_text .txt{
+    font-size: 20px;
+    line-height: 22px;
+}
+.assets_list{
+    padding:90px 0 66px 0;
+
+}
+.assets_list li{
+    width:200px;
+    height:234px;
+    border: 1px solid #fcb22f;
+    background: #fdfaf4;
+    float: left;
+    margin:0 4px;
+    padding:0 13px;
+}
+.assets_list li p{
+    text-align: center;
+    font-size: 22px;
+    height:64px;
+    line-height: 64px;
+    margin-bottom: 10px;
+    color:#767676;
+}
+.assets_list table{
+    width:100%;
+}
+.assets_list table tr{
+    font-size: 16px;
+    color:#989898;
+    height:35px;
+    line-height: 35px;
+
+}
+.assets_list  tr td:nth-of-type(1){
+    text-align: left;
+}
+.assets_list  tr td:nth-of-type(2){
+    text-align: right;
+}
+.trend_detail{
+    padding-top:36px;
+}
+.trend_detail h2{
+    line-height: 40px;
+}
+.trend_detail .date{
+    height:30px;
+    line-height: 30px;
+    font-size: 16px;
+    color:#767676;
+
+}
+.trend_detail .date span{
+    display: inline-block;
+    width:100px;
+    height:30px;
+    position: relative;
+    text-indent: 18px;
+    float: right;
+    cursor: pointer;
+}
+.trend_detail .date span:before{
+    content:'';
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #cfcfcf;
+    width:7px;
+    height:7px;
+    position: absolute;
+    left:0;
+    top:11px;
+    border-radius: 50%;
+}
+.trend_detail .date .active{
+    color:#ff6565;
+}
+.trend_detail  .date .active:before{
+    background: #ff6565;
+    border: 0;
+
+}

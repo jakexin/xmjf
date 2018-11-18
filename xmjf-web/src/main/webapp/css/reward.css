@@ -1,0 +1,277 @@
+
+.content {
+    background: #ffffff;
+    width: 960px;
+    min-height: 1440px;
+}
+
+.redPackets-top {
+    width: 100%;
+    height: 216px;
+}
+
+.redPackets-title {
+    width: 100%;
+    height: 80px;
+}
+
+.redPackets-title-left {
+    width: 196px;
+    height: 80px;
+    float: left;
+    line-height: 80px;
+    color: #767676;
+    text-align: center;
+    font-size: 22px;
+    padding-left: 27px;
+}
+
+.exchange {
+    width: 100%;
+    height: 136px;
+}
+
+.exchange-center {
+    width: 916px;
+    height: 136px;
+    margin: 0 auto;
+    border-bottom: dashed 1px #acacac;
+}
+
+.input {
+    width: 250px;
+    height: 54px;
+    margin-left: 44px;
+    margin-top: 20px;
+    border: solid 1px #ff5555;
+    border-radius: 3px;
+    float: left;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.but {
+    width: 126px;
+    height: 54px;
+    background: #ff5555;
+    border: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 18px;
+    color: #fffefe;
+    cursor: pointer;
+}
+
+.possess {
+    width: 100%;
+    height: 262px;
+}
+
+.possess-center {
+    width: 916px;
+    height: 262px;
+    margin: 0 auto;
+}
+
+.obtain {
+    width: 290px;
+    height: 262px;
+    padding: 1px;
+}
+
+.obtain-img {
+    width: 167px;
+    height: 167px;
+    background: url("/img/reward.png");
+    margin-top: 50px;
+    margin-left: 90px;
+    line-height: 130px;
+    text-align: center;
+    font-size: 24px;
+    color: #fcb22f;
+    float: left;
+}
+
+.equal {
+    width: 104px;
+    height: 168px;
+    line-height: 168px;
+    font-size: 36px;
+    color: #8e8e8e;
+    margin-top: 50px;
+    font-weight: bold;
+    float: left;
+}
+
+.envelope-img {
+    width: 167px;
+    height: 167px;
+    background: url("/img/hongbao.png");
+    margin-top: 50px;
+    line-height: 130px;
+    text-align: center;
+    font-size: 24px;
+    color: #fcb22f;
+    float: left;
+}
+
+.increases-img {
+    width: 167px;
+    height: 167px;
+    background: url("/img/jiaxi.png");
+    margin-top: 50px;
+    line-height: 130px;
+    text-align: center;
+    font-size: 24px;
+    color: #fcb22f;
+    float: left;
+}
+
+.red-rate {
+    width: 100%;
+    height: 60px;
+}
+
+.red-rate-center {
+    width: 920px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.rate-center-title {
+    background: #f6f6f6;
+    width: 856px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.title-red {
+    width: 120px;
+    height: 58px;
+    color: #777777;
+    line-height: 58px;
+    text-align: center;
+    float: left;
+    font-size: 18px;
+    cursor: pointer;
+    background: #f6f6f6;
+}
+
+.title-rate {
+    width: 120px;
+    height: 58px;
+    color: #777777;
+    line-height: 58px;
+    text-align: center;
+    float: left;
+    font-size: 18px;
+    cursor: pointer;
+    background: #f6f6f6;
+}
+.screening{
+    width: 856px;
+    height: 60px;
+    margin: 0 auto;
+}
+.screening-options{
+    width: 242px;
+    height: 60px;
+    float: right;
+}
+.screening-options-first{
+    width: 80px;
+    height: 60px;
+    float: left;
+    font-size: 18px;
+    color: #ff6262;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+.my-redenvelope{
+    width: 100%;
+    height: 700px;
+}
+.my-redenvelope-first{
+    background: url("/img/hongbaobeijing.png") no-repeat center;
+    background-size: contain;
+    width: 208px;
+    height: 286px;
+    float: left;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.my-rate-first{
+    background: url("/img/jiaxiquanbeijing.png") no-repeat center;
+    background-size: contain;
+    width: 205px;
+    height: 286px;
+    float: left;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.my-redenvelope-center{
+    width: 872px;
+    margin: 0 auto;
+}
+.my-redenvelope-top{
+    width: 100%;
+}
+.redenvelope-top-title{
+    width: 108px;
+    height: 18px;
+    margin-top: 30px;
+    padding-left: 10px;
+    font-size: 15px;
+    color: #ffffff;
+}
+.redenvelope-top-money{
+    width: 100%;
+    height: 46px;
+    font-size: 56px;
+    line-height: 46px;
+    color: #ffffff;
+    margin-top: 16px;
+    text-align: center;
+}
+.redenvelope-top-full{
+    width: 100%;
+    height: 20px;
+    margin-top: 6px;
+    padding-left: 20px;
+    font-size: 13px;
+    color: #ffffff;
+    line-height: 20px;
+}
+.redenvelope-top-fullCenter{
+    width: 100%;
+    height: 20px;
+    padding-left: 20px;
+    font-size: 13px;
+    color: #ffffff;
+    line-height: 20px;
+}
+.employ-but{
+    width: 100%;
+    height: 70px;
+    margin-top: 33px;
+}
+.employ-but-text{
+    width: 84px;
+    height: 70px;
+    margin-left: 40px;
+    float: left;
+    font-size: 20px;
+    line-height: 70px;
+    color: #ff5555;
+}
+.display{
+    display: none;
+}
+.reward_active{
+    background:#ff5555;
+    color:#fff;
+}

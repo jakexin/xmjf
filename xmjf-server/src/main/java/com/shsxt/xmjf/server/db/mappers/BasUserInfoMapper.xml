@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shsxt.xmjf.server.db.dao.BasUserInfoMapper" >
+  <resultMap id="BaseResultMap" type="com.shsxt.xmjf.api.po.BasUserInfo" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="birthday" property="birthday" jdbcType="TIMESTAMP" />
+    <result column="customer_type" property="customerType" jdbcType="INTEGER" />
+    <result column="edu" property="edu" jdbcType="VARCHAR" />
+    <result column="company_address" property="companyAddress" jdbcType="VARCHAR" />
+    <result column="home_address" property="homeAddress" jdbcType="VARCHAR" />
+    <result column="current_address" property="currentAddress" jdbcType="VARCHAR" />
+    <result column="birth_address" property="birthAddress" jdbcType="VARCHAR" />
+    <result column="idcard1" property="idcard1" jdbcType="VARCHAR" />
+    <result column="idcard2" property="idcard2" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="invite_code" property="inviteCode" jdbcType="VARCHAR" />
+    <result column="qq_open_id" property="qqOpenId" jdbcType="VARCHAR" />
+    <result column="qq_nickname" property="qqNickname" jdbcType="VARCHAR" />
+    <result column="we_chat_open_id" property="weChatOpenId" jdbcType="VARCHAR" />
+    <result column="we_chat_nickname" property="weChatNickname" jdbcType="VARCHAR" />
+    <result column="blog_open_id" property="blogOpenId" jdbcType="VARCHAR" />
+    <result column="blog_nickname" property="blogNickname" jdbcType="VARCHAR" />
+    <result column="photo" property="photo" jdbcType="VARCHAR" />
+    <result column="cash_limit" property="cashLimit" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, user_id, birthday, customer_type, edu, company_address, home_address, current_address, 
+    birth_address, idcard1, idcard2, sex, remark, invite_code, qq_open_id, qq_nickname, 
+    we_chat_open_id, we_chat_nickname, blog_open_id, blog_nickname, photo, cash_limit
+  </sql>
+  <select id="queryById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from bas_user_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <insert id="save" parameterType="com.shsxt.xmjf.api.po.BasUserInfo" >
+    insert into bas_user_info
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="birthday != null" >
+        birthday,
+      </if>
+      <if test="customerType != null" >
+        customer_type,
+      </if>
+      <if test="edu != null" >
+        edu,
+      </if>
+      <if test="companyAddress != null" >
+        company_address,
+      </if>
+      <if test="homeAddress != null" >
+        home_address,
+      </if>
+      <if test="currentAddress != null" >
+        current_address,
+      </if>
+      <if test="birthAddress != null" >
+        birth_address,
+      </if>
+      <if test="idcard1 != null" >
+        idcard1,
+      </if>
+      <if test="idcard2 != null" >
+        idcard2,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="inviteCode != null" >
+        invite_code,
+      </if>
+      <if test="qqOpenId != null" >
+        qq_open_id,
+      </if>
+      <if test="qqNickname != null" >
+        qq_nickname,
+      </if>
+      <if test="weChatOpenId != null" >
+        we_chat_open_id,
+      </if>
+      <if test="weChatNickname != null" >
+        we_chat_nickname,
+      </if>
+      <if test="blogOpenId != null" >
+        blog_open_id,
+      </if>
+      <if test="blogNickname != null" >
+        blog_nickname,
+      </if>
+      <if test="photo != null" >
+        photo,
+      </if>
+      <if test="cashLimit != null" >
+        cash_limit,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="birthday != null" >
+        #{birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="customerType != null" >
+        #{customerType,jdbcType=INTEGER},
+      </if>
+      <if test="edu != null" >
+        #{edu,jdbcType=VARCHAR},
+      </if>
+      <if test="companyAddress != null" >
+        #{companyAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="homeAddress != null" >
+        #{homeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="currentAddress != null" >
+        #{currentAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="birthAddress != null" >
+        #{birthAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="idcard1 != null" >
+        #{idcard1,jdbcType=VARCHAR},
+      </if>
+      <if test="idcard2 != null" >
+        #{idcard2,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="inviteCode != null" >
+        #{inviteCode,jdbcType=VARCHAR},
+      </if>
+      <if test="qqOpenId != null" >
+        #{qqOpenId,jdbcType=VARCHAR},
+      </if>
+      <if test="qqNickname != null" >
+        #{qqNickname,jdbcType=VARCHAR},
+      </if>
+      <if test="weChatOpenId != null" >
+        #{weChatOpenId,jdbcType=VARCHAR},
+      </if>
+      <if test="weChatNickname != null" >
+        #{weChatNickname,jdbcType=VARCHAR},
+      </if>
+      <if test="blogOpenId != null" >
+        #{blogOpenId,jdbcType=VARCHAR},
+      </if>
+      <if test="blogNickname != null" >
+        #{blogNickname,jdbcType=VARCHAR},
+      </if>
+      <if test="photo != null" >
+        #{photo,jdbcType=VARCHAR},
+      </if>
+      <if test="cashLimit != null" >
+        #{cashLimit,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="update" parameterType="com.shsxt.xmjf.api.po.BasUserInfo" >
+    update bas_user_info
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="birthday != null" >
+        birthday = #{birthday,jdbcType=TIMESTAMP},
+      </if>
+      <if test="customerType != null" >
+        customer_type = #{customerType,jdbcType=INTEGER},
+      </if>
+      <if test="edu != null" >
+        edu = #{edu,jdbcType=VARCHAR},
+      </if>
+      <if test="companyAddress != null" >
+        company_address = #{companyAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="homeAddress != null" >
+        home_address = #{homeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="currentAddress != null" >
+        current_address = #{currentAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="birthAddress != null" >
+        birth_address = #{birthAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="idcard1 != null" >
+        idcard1 = #{idcard1,jdbcType=VARCHAR},
+      </if>
+      <if test="idcard2 != null" >
+        idcard2 = #{idcard2,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        sex = #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="inviteCode != null" >
+        invite_code = #{inviteCode,jdbcType=VARCHAR},
+      </if>
+      <if test="qqOpenId != null" >
+        qq_open_id = #{qqOpenId,jdbcType=VARCHAR},
+      </if>
+      <if test="qqNickname != null" >
+        qq_nickname = #{qqNickname,jdbcType=VARCHAR},
+      </if>
+      <if test="weChatOpenId != null" >
+        we_chat_open_id = #{weChatOpenId,jdbcType=VARCHAR},
+      </if>
+      <if test="weChatNickname != null" >
+        we_chat_nickname = #{weChatNickname,jdbcType=VARCHAR},
+      </if>
+      <if test="blogOpenId != null" >
+        blog_open_id = #{blogOpenId,jdbcType=VARCHAR},
+      </if>
+      <if test="blogNickname != null" >
+        blog_nickname = #{blogNickname,jdbcType=VARCHAR},
+      </if>
+      <if test="photo != null" >
+        photo = #{photo,jdbcType=VARCHAR},
+      </if>
+      <if test="cashLimit != null" >
+        cash_limit = #{cashLimit,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

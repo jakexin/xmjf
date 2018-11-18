@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shsxt.xmjf.server.db.dao.BusItemLoanMapper" >
+  <resultMap id="BaseResultMap" type="com.shsxt.xmjf.api.po.BusItemLoan" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="item_id" property="itemId" jdbcType="INTEGER" />
+    <result column="number" property="number" jdbcType="VARCHAR" />
+    <result column="borrower" property="borrower" jdbcType="VARCHAR" />
+    <result column="id_card" property="idCard" jdbcType="VARCHAR" />
+    <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+    <result column="car_brand" property="carBrand" jdbcType="VARCHAR" />
+    <result column="car_demio" property="carDemio" jdbcType="VARCHAR" />
+    <result column="car_type" property="carType" jdbcType="VARCHAR" />
+    <result column="car_color" property="carColor" jdbcType="VARCHAR" />
+    <result column="buy_time" property="buyTime" jdbcType="VARCHAR" />
+    <result column="buy_price" property="buyPrice" jdbcType="VARCHAR" />
+    <result column="kilometers" property="kilometers" jdbcType="VARCHAR" />
+    <result column="assess_price" property="assessPrice" jdbcType="VARCHAR" />
+    <result column="licensing_time" property="licensingTime" jdbcType="TIMESTAMP" />
+    <result column="is_new_car" property="isNewCar" jdbcType="INTEGER" />
+    <result column="first_pay_amount" property="firstPayAmount" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, item_id, number, borrower, id_card, mobile, car_brand, car_demio, car_type, car_color, 
+    buy_time, buy_price, kilometers, assess_price, licensing_time, is_new_car, first_pay_amount
+  </sql>
+  <select id="queryById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from bus_item_loan
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <insert id="insert" parameterType="com.shsxt.xmjf.api.po.BusItemLoan" >
+    insert into bus_item_loan
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="itemId != null" >
+        item_id,
+      </if>
+      <if test="number != null" >
+        number,
+      </if>
+      <if test="borrower != null" >
+        borrower,
+      </if>
+      <if test="idCard != null" >
+        id_card,
+      </if>
+      <if test="mobile != null" >
+        mobile,
+      </if>
+      <if test="carBrand != null" >
+        car_brand,
+      </if>
+      <if test="carDemio != null" >
+        car_demio,
+      </if>
+      <if test="carType != null" >
+        car_type,
+      </if>
+      <if test="carColor != null" >
+        car_color,
+      </if>
+      <if test="buyTime != null" >
+        buy_time,
+      </if>
+      <if test="buyPrice != null" >
+        buy_price,
+      </if>
+      <if test="kilometers != null" >
+        kilometers,
+      </if>
+      <if test="assessPrice != null" >
+        assess_price,
+      </if>
+      <if test="licensingTime != null" >
+        licensing_time,
+      </if>
+      <if test="isNewCar != null" >
+        is_new_car,
+      </if>
+      <if test="firstPayAmount != null" >
+        first_pay_amount,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="itemId != null" >
+        #{itemId,jdbcType=INTEGER},
+      </if>
+      <if test="number != null" >
+        #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="borrower != null" >
+        #{borrower,jdbcType=VARCHAR},
+      </if>
+      <if test="idCard != null" >
+        #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="carBrand != null" >
+        #{carBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="carDemio != null" >
+        #{carDemio,jdbcType=VARCHAR},
+      </if>
+      <if test="carType != null" >
+        #{carType,jdbcType=VARCHAR},
+      </if>
+      <if test="carColor != null" >
+        #{carColor,jdbcType=VARCHAR},
+      </if>
+      <if test="buyTime != null" >
+        #{buyTime,jdbcType=VARCHAR},
+      </if>
+      <if test="buyPrice != null" >
+        #{buyPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="kilometers != null" >
+        #{kilometers,jdbcType=VARCHAR},
+      </if>
+      <if test="assessPrice != null" >
+        #{assessPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="licensingTime != null" >
+        #{licensingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isNewCar != null" >
+        #{isNewCar,jdbcType=INTEGER},
+      </if>
+      <if test="firstPayAmount != null" >
+        #{firstPayAmount,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="update" parameterType="com.shsxt.xmjf.api.po.BusItemLoan" >
+    update bus_item_loan
+    <set >
+      <if test="itemId != null" >
+        item_id = #{itemId,jdbcType=INTEGER},
+      </if>
+      <if test="number != null" >
+        number = #{number,jdbcType=VARCHAR},
+      </if>
+      <if test="borrower != null" >
+        borrower = #{borrower,jdbcType=VARCHAR},
+      </if>
+      <if test="idCard != null" >
+        id_card = #{idCard,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="carBrand != null" >
+        car_brand = #{carBrand,jdbcType=VARCHAR},
+      </if>
+      <if test="carDemio != null" >
+        car_demio = #{carDemio,jdbcType=VARCHAR},
+      </if>
+      <if test="carType != null" >
+        car_type = #{carType,jdbcType=VARCHAR},
+      </if>
+      <if test="carColor != null" >
+        car_color = #{carColor,jdbcType=VARCHAR},
+      </if>
+      <if test="buyTime != null" >
+        buy_time = #{buyTime,jdbcType=VARCHAR},
+      </if>
+      <if test="buyPrice != null" >
+        buy_price = #{buyPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="kilometers != null" >
+        kilometers = #{kilometers,jdbcType=VARCHAR},
+      </if>
+      <if test="assessPrice != null" >
+        assess_price = #{assessPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="licensingTime != null" >
+        licensing_time = #{licensingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isNewCar != null" >
+        is_new_car = #{isNewCar,jdbcType=INTEGER},
+      </if>
+      <if test="firstPayAmount != null" >
+        first_pay_amount = #{firstPayAmount,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="queryItemLoanByItemId" resultMap="BaseResultMap">
+      select <include refid="Base_Column_List"/>
+      from bus_item_loan
+      where item_id=#{itemId}
+  </select>
+</mapper>

@@ -1,0 +1,240 @@
+.login-content {
+    background: #efefef;
+    width: 100%;
+    height: auto;
+    min-width: 1240px;
+    padding: 1px;
+}
+.login-content-center{
+    background:#ffffff;
+    width: 1200px;
+    height: 815px;
+    margin: 20px auto;
+}
+.login-content-center1{
+    background:#ffffff;
+    width: 1200px;
+    height: 500px;
+    margin: 20px auto;
+}
+.forget-title{
+    width: 100%;
+    height: 152px;
+    text-align: center;
+    padding-top: 50px;
+}
+.identity-prompt{
+    width: 100%;
+    text-align: center;
+
+}
+.identity-prompt span{
+    width: 80%;
+    height: 50px;
+    line-height: 50px;
+    padding: 20px 20%;
+    background: #fff9ef;
+    color: #fcb22f;
+}
+.forget-content{
+    width: 100%;
+    height: 403px;
+}
+.forget-content-center{
+    width: 445px;
+    height: 403px;
+    margin: 0 auto;
+}
+.blank{
+    width: 100%;
+    height: 74px;
+}
+.phoneNum{
+    width: 100%;
+    height: 66px;
+}
+.phoneNum-text{
+    width: 140px;
+    padding-left: 36px;
+    height: 66px;
+    text-align: left;
+    float: left;
+    line-height: 48px;
+    font-size: 16px;
+    color: #606060;
+    font-family: 微软雅黑;
+    text-align: right;
+}
+.phoneNum-text2{
+    width: 80px;
+    height: 66px;
+    text-align: left;
+    float: left;
+    line-height: 48px;
+    font-size: 16px;
+    color: #606060;
+    font-family: 微软雅黑;
+    margin-left: 60px;
+}
+.phoneNum-text3{
+    padding-left: 36px;
+    width: 133px;
+    height: 66px;
+    text-align: right;
+    float: left;
+    line-height: 48px;
+    font-size: 16px;
+    color: #606060;
+    font-family: 微软雅黑;
+}
+.phoneNum-input{
+    margin-left: 8px;
+    width: 295px;
+    height: 48px;
+    border: solid 1px #e7e6e6;
+    border-radius: 3px;
+    font-size: 15px;
+    color: #606060;
+    font-family: 微软雅黑;
+    padding-left: 15px;
+}
+input::-webkit-input-placeholder { /* WebKit browsers */   color:#d2d2d2;   }
+.codeNum-input{
+    margin-left: 15px;
+    width: 203px;
+    height: 48px;
+    border: solid 1px #e7e6e6;
+    border-radius: 3px;
+    font-size: 15px;
+    color: #606060;
+    font-family: 微软雅黑;
+    padding-left: 10px;
+    float: left;
+}
+.codeNum-img{
+    width: 115px;
+    height: 48px;
+    float: right;
+}
+.sliding{
+    width: 100%;
+    height: 48px;
+}
+.sliding-but{
+    width: 344px;
+    height: 48px;
+    float: right;
+    border: solid 1px #e7e6e6;
+    border-radius: 3px;
+}
+.sliding-buttom{
+    background: #ebebeb;
+    width: 48px;
+    height: 47px;
+    line-height: 48px;
+    color: #c2c2c2;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+.login-but{
+    width: 100%;
+    height: 46px;
+    margin-top: 26px;
+}
+.login-but-center{
+    width: 343px;
+    height: 46px;
+    float: right;
+}
+.but{
+    width: 100%;
+    height: 100%;
+    background: #fcb22f;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 46px;
+    color: #ffffff;
+    font-size: 22px;
+    font-family: 微软雅黑;
+    cursor: pointer;
+}
+.codeNum-button{
+    width: 90px;
+    height: 48px;
+    float: left;
+    background: #fcb22f;
+    color: #ffffff;
+    text-align: center;
+    line-height: 48px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.login_input_code {
+    height: 48px;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.login-check-code {
+    width: 67%;
+}
+.validImg {
+    width: 18%;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    margin-left: 2px;
+}
+.login-input{
+    width: 42%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 48px;
+    color: #606060;
+    border:solid #e7e6e6 1px;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+.pic-code-phoneNum {
+    width: 90px;
+}
+#_ocx_password,#_ocx_password1{
+    border:1px solid #ccc !important;
+    float: right;
+    width: 295px;
+    height: 48px;
+    border: solid 1px #e7e6e6;
+    border-radius: 3px;
+    font-size: 15px;
+    color: #606060;
+    font-family: 微软雅黑;
+    padding-left: 15px;
+}
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 38px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}

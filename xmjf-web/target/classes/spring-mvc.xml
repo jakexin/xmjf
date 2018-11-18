@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!-- 扫描com.shsxt.controller 下包 -->
+    <context:component-scan base-package="com.shsxt.xmjf.web"/>
+    <aop:aspectj-autoproxy/>
+
+    <!-- 静态资源映射 location是本地静态资源路径 mapping是映射的url地址，访问时就使用该地址 -->
+    <!--<mvc:resources location="/WEB-INF/static/" mapping="/**" />-->
+
+    <mvc:default-servlet-handler/>
+
+    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/WEB-INF/views/"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="prefix" value=""/>
+        <property name="suffix" value=".ftl"/>
+        <property name="contentType" value="text/html;charset=UTF-8"/>
+    </bean>
+    <!-- mvc 注解驱动 并添加json 支持 -->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <!-- 返回信息为字符串时 处理 -->
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter"></bean>
+            <!-- 将对象转换为json 对象 -->
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <!-- 静态资源文件的处理放行 配置方式一 -->
+    <mvc:default-servlet-handler/>
+
+    <!-- 实现图形验证码 -->
+    <bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">
+        <property name="config">
+            <bean class="com.google.code.kaptcha.util.Config">
+                <constructor-arg>
+                    <props>
+                        <prop key="kaptcha.border">yes</prop><!--是否有边框 -->
+                        <prop key="kaptcha.border.color">105,179,90</prop><!--设置边框颜色 -->
+                        <prop key="kaptcha.textproducer.font.color">green</prop><!--验证码文本字符颜色 默认为Color.BLACK -->
+                        <prop key="kaptcha.session.key">code</prop><!--验证码 -->
+                        <prop key="kaptcha.textproducer.font.names">宋体,楷体,微软雅黑</prop><!--设置字体样式 -->
+                        <prop key="kaptcha.border.thickness"></prop><!--边框粗细度 默认为1 -->
+                        <prop key="kaptcha.producer.impl"></prop><!--验证码生成器 默认为DefaultKaptcha -->
+                        <prop key="kaptcha.textproducer.impl"></prop><!-- 验证码文本生成器 默认为DefaultTextCreator -->
+                        <prop key="kaptcha.textproducer.char.string"></prop><!--验证码文本字符内容范围 默认为abcde2345678gfynmnpwx -->
+                        <prop key="kaptcha.textproducer.char.length">4</prop><!-- 验证码文本字符长度 默认为5 -->
+                        <prop key="kaptcha.textproducer.font.size">40</prop><!--验证码文本字符大小 默认为40 -->
+                        <prop key="kaptcha.textproducer.char.space">6</prop>    <!--验证码文本字符间距 默认为2 -->
+                        <prop key="kaptcha.image.width">200</prop>    <!--验证码图片宽度 默认为200 -->
+                        <prop key="kaptcha.image.height">50</prop> <!--验证码图片高度 默认为40 -->
+                    </props>
+                </constructor-arg>
+            </bean>
+        </property>
+    </bean>
+
+    <!-- 消费⽅应⽤名， ⽤于计算依赖关系， 不是匹配条件， 不要与提供⽅⼀样 -->
+    <dubbo:application name="xmjf-web-consumer"/>
+    <!-- 使⽤zookeeper注册中⼼暴露发现服务地址 -->
+    <dubbo:registry protocol="zookeeper" address="zookeeper://127.0.0.1:2181" timeout="30000"/>
+    <!-- ⽣成远程服务代理， 可以和本地bean⼀样使⽤ -->
+    <dubbo:reference id="userService" interface="com.shsxt.xmjf.api.service.UserServiceI"/>
+    <dubbo:reference id="smsService" interface="com.shsxt.xmjf.api.service.SmsServiceI"/>
+    <dubbo:reference id="basItemService" interface="com.shsxt.xmjf.api.service.BasItemServiceI"/>
+    <dubbo:reference id="busAccountService" interface="com.shsxt.xmjf.api.service.BusAccountServiceI"></dubbo:reference>
+    <dubbo:reference id="basUserSecurityService" interface="com.shsxt.xmjf.api.service.BasUserSecurityServiceI" ></dubbo:reference>
+    <dubbo:reference id="busItemLoanService" interface="com.shsxt.xmjf.api.service.BusItemLoanServiceI"></dubbo:reference>
+    <dubbo:reference id="sysPictureService" interface="com.shsxt.xmjf.api.service.SysPictureServiceI"></dubbo:reference>
+    <dubbo:reference id="busAccountRechargeService" interface="com.shsxt.xmjf.api.service.BusAccountRechargeServiceI" timeout="10000"></dubbo:reference>
+    <dubbo:reference id="busItemInvestService" interface="com.shsxt.xmjf.api.service.BusItemInvestServiceI"></dubbo:reference>
+
+    <!--<mvc:interceptors>
+
+    </mvc:interceptors>-->
+</beans>

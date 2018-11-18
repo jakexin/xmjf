@@ -1,0 +1,39 @@
+.content{
+    width: 925px;
+    height: 866px;
+    background: #ffffff;
+}
+.content-title{
+    width: 100%;
+    height: 76px;
+    margin-top: 50px;
+    line-height: 76px;
+    font-size: 30px;
+    color: #656565;
+    border-bottom: solid 1px #e2e2e2;
+}
+.announcement-first{
+    width: 100%;
+    height: 46px;
+    border-bottom: solid 1px #e2e2e2;
+    margin-top: 28px;
+}
+.announcement-first-content{
+    height: 46px;
+    float: left;
+    line-height: 46px;
+    font-size: 18px;
+    color: #757575;
+}
+.announcement-first-day{
+    height: 46px;
+    float: right;
+    line-height: 46px;
+    font-size: 18px;
+    color: #757575;
+}
+.announcement-two{
+    width: 100%;
+    height: 46px;
+    border-bottom: solid 1px #e2e2e2;
+}

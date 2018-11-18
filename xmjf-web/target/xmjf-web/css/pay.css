@@ -1,0 +1,47 @@
+form{
+    height:380px;
+    width:960px;
+    background: #fff;
+    margin:132px auto;
+    text-align: center;
+    position: relative;
+}
+form:before{
+    content:'跳转支付';
+    display: inline-block;
+    position: absolute;
+    color:#333;
+    padding:12px 16px;
+    width:100%;
+    border-bottom:1px solid #f0f0f0;
+    left:0;
+    text-align: left;
+    font-size:14px;
+}
+form:after{
+    content:url(/img/bank.png);
+    display: inline-block;
+    position: absolute;
+    left:372px;
+    top:76px;
+}
+input[readonly]{
+    display: none;
+}
+input[type=text]{
+    opacity: 0;
+}
+input[type=submit]{
+    font-size:14px;
+    height:36px;
+    width:140px;
+    background: #fc8c01;
+    color:#fff;
+    outline: none;
+    border: none;
+    margin-top:270px;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background: #ff9d00;
+}

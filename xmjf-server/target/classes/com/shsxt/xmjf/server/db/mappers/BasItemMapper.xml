@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shsxt.xmjf.server.db.dao.BasItemMapper" >
+  <resultMap id="BaseResultMap" type="com.shsxt.xmjf.api.po.BasItem" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="item_isalive" property="itemIsalive" jdbcType="TINYINT" />
+    <result column="item_isnew" property="itemIsnew" jdbcType="TINYINT" />
+    <result column="item_isrecommend" property="itemIsrecommend" jdbcType="INTEGER" />
+    <result column="item_status" property="itemStatus" jdbcType="INTEGER" />
+    <result column="item_user_id" property="itemUserId" jdbcType="INTEGER" />
+    <result column="item_name" property="itemName" jdbcType="VARCHAR" />
+    <result column="item_second_name" property="itemSecondName" jdbcType="VARCHAR" />
+    <result column="item_number" property="itemNumber" jdbcType="VARCHAR" />
+    <result column="item_desc" property="itemDesc" jdbcType="VARCHAR" />
+    <result column="item_rate" property="itemRate" jdbcType="DECIMAL" />
+    <result column="item_add_rate" property="itemAddRate" jdbcType="DECIMAL" />
+    <result column="item_serve_rate" property="itemServeRate" jdbcType="DECIMAL" />
+    <result column="item_type" property="itemType" jdbcType="INTEGER" />
+    <result column="item_cycle" property="itemCycle" jdbcType="INTEGER" />
+    <result column="item_cycle_unit" property="itemCycleUnit" jdbcType="INTEGER" />
+    <result column="item_account" property="itemAccount" jdbcType="DECIMAL" />
+    <result column="item_ongoing_account" property="itemOngoingAccount" jdbcType="DECIMAL" />
+    <result column="item_scale" property="itemScale" jdbcType="DECIMAL" />
+    <result column="item_single_min_investment" property="itemSingleMinInvestment" jdbcType="DECIMAL" />
+    <result column="item_repay_method" property="itemRepayMethod" jdbcType="INTEGER" />
+    <result column="item_single_max_investment" property="itemSingleMaxInvestment" jdbcType="DECIMAL" />
+    <result column="item_max_investment" property="itemMaxInvestment" jdbcType="DECIMAL" />
+    <result column="invest_times" property="investTimes" jdbcType="INTEGER" />
+    <result column="addip" property="addip" jdbcType="VARCHAR" />
+    <result column="addtime" property="addtime" jdbcType="TIMESTAMP" />
+    <result column="release_time" property="releaseTime" jdbcType="TIMESTAMP" />
+    <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="guarantee_id" property="guaranteeId" jdbcType="INTEGER" />
+    <result column="contract" property="contract" jdbcType="VARCHAR" />
+    <result column="receipt_method" property="receiptMethod" jdbcType="INTEGER" />
+    <result column="prepayment" property="prepayment" jdbcType="INTEGER" />
+    <result column="move_vip" property="moveVip" jdbcType="INTEGER" />
+    <result column="item_loan_use" property="itemLoanUse" jdbcType="VARCHAR" />
+    <result column="item_is_auto" property="itemIsAuto" jdbcType="INTEGER" />
+    <result column="item_content" property="itemContent" jdbcType="LONGVARCHAR" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    id, item_isalive, item_isnew, item_isrecommend, item_status, item_user_id, item_name, 
+    item_second_name, item_number, item_desc, item_rate, item_add_rate, item_serve_rate, 
+    item_type, item_cycle, item_cycle_unit, item_account, item_ongoing_account, item_scale, 
+    item_single_min_investment, item_repay_method, item_single_max_investment, item_max_investment, 
+    invest_times, addip, addtime, release_time, end_time, update_time, password, guarantee_id, 
+    contract, receipt_method, prepayment, move_vip, item_loan_use, item_is_auto,item_content
+  </sql>
+
+  <select id="queryById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from bas_item
+    where id = #{id,jdbcType=INTEGER} and item_isalive=1
+  </select>
+  <insert id="save" parameterType="com.shsxt.xmjf.api.po.BasItem" >
+    insert into bas_item
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="itemIsalive != null" >
+        item_isalive,
+      </if>
+      <if test="itemIsnew != null" >
+        item_isnew,
+      </if>
+      <if test="itemIsrecommend != null" >
+        item_isrecommend,
+      </if>
+      <if test="itemStatus != null" >
+        item_status,
+      </if>
+      <if test="itemUserId != null" >
+        item_user_id,
+      </if>
+      <if test="itemName != null" >
+        item_name,
+      </if>
+      <if test="itemSecondName != null" >
+        item_second_name,
+      </if>
+      <if test="itemNumber != null" >
+        item_number,
+      </if>
+      <if test="itemDesc != null" >
+        item_desc,
+      </if>
+      <if test="itemRate != null" >
+        item_rate,
+      </if>
+      <if test="itemAddRate != null" >
+        item_add_rate,
+      </if>
+      <if test="itemServeRate != null" >
+        item_serve_rate,
+      </if>
+      <if test="itemType != null" >
+        item_type,
+      </if>
+      <if test="itemCycle != null" >
+        item_cycle,
+      </if>
+      <if test="itemCycleUnit != null" >
+        item_cycle_unit,
+      </if>
+      <if test="itemAccount != null" >
+        item_account,
+      </if>
+      <if test="itemOngoingAccount != null" >
+        item_ongoing_account,
+      </if>
+      <if test="itemScale != null" >
+        item_scale,
+      </if>
+      <if test="itemSingleMinInvestment != null" >
+        item_single_min_investment,
+      </if>
+      <if test="itemRepayMethod != null" >
+        item_repay_method,
+      </if>
+      <if test="itemSingleMaxInvestment != null" >
+        item_single_max_investment,
+      </if>
+      <if test="itemMaxInvestment != null" >
+        item_max_investment,
+      </if>
+      <if test="investTimes != null" >
+        invest_times,
+      </if>
+      <if test="addip != null" >
+        addip,
+      </if>
+      <if test="addtime != null" >
+        addtime,
+      </if>
+      <if test="releaseTime != null" >
+        release_time,
+      </if>
+      <if test="endTime != null" >
+        end_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="guaranteeId != null" >
+        guarantee_id,
+      </if>
+      <if test="contract != null" >
+        contract,
+      </if>
+      <if test="receiptMethod != null" >
+        receipt_method,
+      </if>
+      <if test="prepayment != null" >
+        prepayment,
+      </if>
+      <if test="moveVip != null" >
+        move_vip,
+      </if>
+      <if test="itemLoanUse != null" >
+        item_loan_use,
+      </if>
+      <if test="itemIsAuto != null" >
+        item_is_auto,
+      </if>
+      <if test="itemContent != null" >
+        item_content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="itemIsalive != null" >
+        #{itemIsalive,jdbcType=TINYINT},
+      </if>
+      <if test="itemIsnew != null" >
+        #{itemIsnew,jdbcType=TINYINT},
+      </if>
+      <if test="itemIsrecommend != null" >
+        #{itemIsrecommend,jdbcType=INTEGER},
+      </if>
+      <if test="itemStatus != null" >
+        #{itemStatus,jdbcType=INTEGER},
+      </if>
+      <if test="itemUserId != null" >
+        #{itemUserId,jdbcType=INTEGER},
+      </if>
+      <if test="itemName != null" >
+        #{itemName,jdbcType=VARCHAR},
+      </if>
+      <if test="itemSecondName != null" >
+        #{itemSecondName,jdbcType=VARCHAR},
+      </if>
+      <if test="itemNumber != null" >
+        #{itemNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="itemDesc != null" >
+        #{itemDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="itemRate != null" >
+        #{itemRate,jdbcType=DECIMAL},
+      </if>
+      <if test="itemAddRate != null" >
+        #{itemAddRate,jdbcType=DECIMAL},
+      </if>
+      <if test="itemServeRate != null" >
+        #{itemServeRate,jdbcType=DECIMAL},
+      </if>
+      <if test="itemType != null" >
+        #{itemType,jdbcType=INTEGER},
+      </if>
+      <if test="itemCycle != null" >
+        #{itemCycle,jdbcType=INTEGER},
+      </if>
+      <if test="itemCycleUnit != null" >
+        #{itemCycleUnit,jdbcType=INTEGER},
+      </if>
+      <if test="itemAccount != null" >
+        #{itemAccount,jdbcType=DECIMAL},
+      </if>
+      <if test="itemOngoingAccount != null" >
+        #{itemOngoingAccount,jdbcType=DECIMAL},
+      </if>
+      <if test="itemScale != null" >
+        #{itemScale,jdbcType=DECIMAL},
+      </if>
+      <if test="itemSingleMinInvestment != null" >
+        #{itemSingleMinInvestment,jdbcType=DECIMAL},
+      </if>
+      <if test="itemRepayMethod != null" >
+        #{itemRepayMethod,jdbcType=INTEGER},
+      </if>
+      <if test="itemSingleMaxInvestment != null" >
+        #{itemSingleMaxInvestment,jdbcType=DECIMAL},
+      </if>
+      <if test="itemMaxInvestment != null" >
+        #{itemMaxInvestment,jdbcType=DECIMAL},
+      </if>
+      <if test="investTimes != null" >
+        #{investTimes,jdbcType=INTEGER},
+      </if>
+      <if test="addip != null" >
+        #{addip,jdbcType=VARCHAR},
+      </if>
+      <if test="addtime != null" >
+        #{addtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="releaseTime != null" >
+        #{releaseTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null" >
+        #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="guaranteeId != null" >
+        #{guaranteeId,jdbcType=INTEGER},
+      </if>
+      <if test="contract != null" >
+        #{contract,jdbcType=VARCHAR},
+      </if>
+      <if test="receiptMethod != null" >
+        #{receiptMethod,jdbcType=INTEGER},
+      </if>
+      <if test="prepayment != null" >
+        #{prepayment,jdbcType=INTEGER},
+      </if>
+      <if test="moveVip != null" >
+        #{moveVip,jdbcType=INTEGER},
+      </if>
+      <if test="itemLoanUse != null" >
+        #{itemLoanUse,jdbcType=VARCHAR},
+      </if>
+      <if test="itemIsAuto != null" >
+        #{itemIsAuto,jdbcType=INTEGER},
+      </if>
+      <if test="itemContent != null" >
+        #{itemContent,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="update" parameterType="com.shsxt.xmjf.api.po.BasItem" >
+    update bas_item
+    <set >
+      <if test="itemIsalive != null" >
+        item_isalive = #{itemIsalive,jdbcType=TINYINT},
+      </if>
+      <if test="itemIsnew != null" >
+        item_isnew = #{itemIsnew,jdbcType=TINYINT},
+      </if>
+      <if test="itemIsrecommend != null" >
+        item_isrecommend = #{itemIsrecommend,jdbcType=INTEGER},
+      </if>
+      <if test="itemStatus != null" >
+        item_status = #{itemStatus,jdbcType=INTEGER},
+      </if>
+      <if test="itemUserId != null" >
+        item_user_id = #{itemUserId,jdbcType=INTEGER},
+      </if>
+      <if test="itemName != null" >
+        item_name = #{itemName,jdbcType=VARCHAR},
+      </if>
+      <if test="itemSecondName != null" >
+        item_second_name = #{itemSecondName,jdbcType=VARCHAR},
+      </if>
+      <if test="itemNumber != null" >
+        item_number = #{itemNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="itemDesc != null" >
+        item_desc = #{itemDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="itemRate != null" >
+        item_rate = #{itemRate,jdbcType=DECIMAL},
+      </if>
+      <if test="itemAddRate != null" >
+        item_add_rate = #{itemAddRate,jdbcType=DECIMAL},
+      </if>
+      <if test="itemServeRate != null" >
+        item_serve_rate = #{itemServeRate,jdbcType=DECIMAL},
+      </if>
+      <if test="itemType != null" >
+        item_type = #{itemType,jdbcType=INTEGER},
+      </if>
+      <if test="itemCycle != null" >
+        item_cycle = #{itemCycle,jdbcType=INTEGER},
+      </if>
+      <if test="itemCycleUnit != null" >
+        item_cycle_unit = #{itemCycleUnit,jdbcType=INTEGER},
+      </if>
+      <if test="itemAccount != null" >
+        item_account = #{itemAccount,jdbcType=DECIMAL},
+      </if>
+      <if test="itemOngoingAccount != null" >
+        item_ongoing_account = #{itemOngoingAccount,jdbcType=DECIMAL},
+      </if>
+      <if test="itemScale != null" >
+        item_scale = #{itemScale,jdbcType=DECIMAL},
+      </if>
+      <if test="itemSingleMinInvestment != null" >
+        item_single_min_investment = #{itemSingleMinInvestment,jdbcType=DECIMAL},
+      </if>
+      <if test="itemRepayMethod != null" >
+        item_repay_method = #{itemRepayMethod,jdbcType=INTEGER},
+      </if>
+      <if test="itemSingleMaxInvestment != null" >
+        item_single_max_investment = #{itemSingleMaxInvestment,jdbcType=DECIMAL},
+      </if>
+      <if test="itemMaxInvestment != null" >
+        item_max_investment = #{itemMaxInvestment,jdbcType=DECIMAL},
+      </if>
+      <if test="investTimes != null" >
+        invest_times = #{investTimes,jdbcType=INTEGER},
+      </if>
+      <if test="addip != null" >
+        addip = #{addip,jdbcType=VARCHAR},
+      </if>
+      <if test="addtime != null" >
+        addtime = #{addtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="releaseTime != null" >
+        release_time = #{releaseTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null" >
+        end_time = #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="guaranteeId != null" >
+        guarantee_id = #{guaranteeId,jdbcType=INTEGER},
+      </if>
+      <if test="contract != null" >
+        contract = #{contract,jdbcType=VARCHAR},
+      </if>
+      <if test="receiptMethod != null" >
+        receipt_method = #{receiptMethod,jdbcType=INTEGER},
+      </if>
+      <if test="prepayment != null" >
+        prepayment = #{prepayment,jdbcType=INTEGER},
+      </if>
+      <if test="moveVip != null" >
+        move_vip = #{moveVip,jdbcType=INTEGER},
+      </if>
+      <if test="itemLoanUse != null" >
+        item_loan_use = #{itemLoanUse,jdbcType=VARCHAR},
+      </if>
+      <if test="itemIsAuto != null" >
+        item_is_auto = #{itemIsAuto,jdbcType=INTEGER},
+      </if>
+      <if test="itemContent != null" >
+        item_content = #{itemContent,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="queryBasItemsByParams"  resultType="map">
+    select bi.*,bis.total,bi.item_cycle
+    from bas_item bi LEFT  JOIN  bas_item_score bis on bi.id=bis.item_id
+    <where>
+         bi.item_isalive=1
+         <if test="null != itemCycle and itemCycle==1">
+            and bi.item_cycle &lt;30
+         </if>
+        <if test="null != itemCycle and itemCycle==2">
+          and (bi.item_cycle &gt;=30 and bi.item_cycle &lt;90)
+        </if>
+        <if test="null != itemCycle and itemCycle==3">
+          and bi.item_cycle &gt;=90
+        </if>
+       <if test="null !=itemType">
+          and bi.item_type=#{itemType}
+       </if>
+       <if test="null !=isHistory and isHistory==0">
+          and (
+              bi.item_status=10 or
+              (
+                bi.item_status=1 and  DATE_FORMAT(bi.release_time,'%Y-%m-%d')=DATE_FORMAT(NOW(),'%Y-%m-%d')
+              )
+            )
+       </if>
+      <if test="null !=isHistory and isHistory==1">
+          and bi.item_status in (18,20,23,30,31,32)
+      </if>
+    </where>
+    <!--  <if test="null !=itemRateOrder">
+        order by bi.item_rate
+      </if>
+      <if test="null !=itemCycleOrder">
+        order by bi.item_cycle
+      </if>
+  -->
+
+
+  </select>
+
+  <update id="updateItemToOpen">
+     update bas_item
+     set item_status=10
+     where item_isalive=1 and id=#{itemId} and item_status=1
+  </update>
+</mapper>

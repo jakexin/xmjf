@@ -1,0 +1,77 @@
+body{
+    background: #fff!important;
+}
+.about_siderbar{
+    float: left;
+}
+.siderbar{
+    width:160px;
+
+}
+.navs{
+    width:100%;
+    padding:42px 0 32px 0;
+}
+.navs a{
+    display: block;
+    position: relative;
+    height:80px;
+    line-height: 80px;
+    font-size: 20px;
+    color:#696969;
+}
+.navs a:after{
+    content:'';
+    display: inline-block;
+    position: absolute;
+    width:16px;
+    height:16px;
+    border-radius: 50%;
+    background: #bdbdbd;
+    top:50%;
+    margin-top: -8px;
+    right:-9px;
+}
+.navs a.active{
+    color:#ff5555;
+}
+.navs a.active:after{
+    background:url(/img/about_siderbar_active.png);
+    display: inline-block;
+    position: absolute;
+    width:45px;
+    height:30px;
+    top:50%;
+    margin-top: -15px;
+    right:-16px;
+    border-radius: 0;
+}
+
+.about_content{
+    width:1040px;
+    border-left:1px solid #bdbdbd;
+    padding-left:115px;
+    padding-bottom:120px;
+    min-height:782px;
+}
+.about_content .pagination>li>a, .contract .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 12px 17px;
+    margin-left: -1px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #d6d6d6;
+    font-size: 15px;
+}
+.about_content .pagination>.active>a,
+.about_content .pagination>.active>a:focus,
+.about_content .pagination>.active>a:hover,
+.about_content .pagination>.active>span,
+.about_content .pagination>.active>span:focus,
+.about_content .pagination>.active>span:hover {
+    z-index: 2;
+    color: #fefefe;
+    cursor: default;
+    background-color: #ff5555;
+}

@@ -1,0 +1,180 @@
+.login-content {
+    background: #efefef;
+    width: 100%;
+    height: 615px;
+    min-width: 1240px;
+    padding: 1px;
+}
+.login-content-center{
+    background:#ffffff;
+    width: 1200px;
+    height: 555px;
+    margin: 20px auto;
+}
+.forget-title{
+    width: 100%;
+    height: 152px;
+}
+.forget-content{
+    width: 100%;
+    height: 403px;
+}
+.forget-content-center{
+    width: 445px;
+    height: 403px;
+    margin: 0 auto;
+}
+.blank{
+    width: 100%;
+    height: 74px;
+}
+.phoneNum{
+    width: 100%;
+    height: 66px;
+}
+.phoneNum-text{
+    width: 102px;
+    padding-left: 36px;
+    height: 66px;
+    text-align: left;
+    float: left;
+    line-height: 48px;
+    font-size: 18px;
+    color: #606060;
+    font-family: 微软雅黑;
+}
+.phoneNum-text2{
+    width: 80px;
+    height: 66px;
+    text-align: left;
+    float: left;
+    line-height: 48px;
+    font-size: 18px;
+    color: #606060;
+    font-family: 微软雅黑;
+}
+.phoneNum-text3{
+    padding-left: 36px;
+    width: 101px;
+    height: 66px;
+    text-align: left;
+    float: left;
+    line-height: 48px;
+    font-size: 18px;
+    color: #606060;
+    font-family: 微软雅黑;
+}
+.phoneNum-input{
+    margin-left: 8px;
+    width: 333px;
+    height: 48px;
+    border: solid 1px #e7e6e6;
+    border-radius: 3px;
+    font-size: 15px;
+    color: #606060;
+    font-family: 微软雅黑;
+    padding-left: 15px;
+}
+input::-webkit-input-placeholder { /* WebKit browsers */   color:#d2d2d2;   }
+.codeNum-input{
+    margin-left:8px;
+    width: 215px;
+    height: 48px;
+    border: solid 1px #e7e6e6;
+    border-radius: 3px;
+    font-size: 15px;
+    color: #606060;
+    font-family: 微软雅黑;
+    padding-left: 10px;
+    float: left;
+}
+.codeNum-img{
+    width: 115px;
+    height: 48px;
+    float: right;
+}
+.sliding{
+    width: 100%;
+    height: 48px;
+}
+.sliding-but{
+    width: 344px;
+    height: 48px;
+    float: right;
+    border: solid 1px #e7e6e6;
+    border-radius: 3px;
+}
+.sliding-buttom{
+    background: #ebebeb;
+    width: 48px;
+    height: 47px;
+    line-height: 48px;
+    color: #c2c2c2;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+.login-but{
+    width: 100%;
+    height: 46px;
+    margin-top: 26px;
+}
+.login-but-center{
+    width: 343px;
+    height: 46px;
+    float: right;
+}
+.but{
+    width: 100%;
+    height: 100%;
+    background: #fcb22f;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 46px;
+    color: #ffffff;
+    font-size: 22px;
+    font-family: 微软雅黑;
+    cursor: pointer;
+}
+.codeNum-button{
+    width: 118px;
+    height: 48px;
+    float: left;
+    background: #fcb22f;
+    color: #ffffff;
+    text-align: center;
+    line-height: 48px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.login_input_code {
+    height: 48px;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.login-check-code {
+    width: 67%;
+    margin-left: 20px;
+}
+.validImg {
+    width: 25%;
+    height: 48px;
+    float: right;
+    line-height: 48px;
+    text-align: center;
+}
+.login-input{
+    width: 48%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 48px;
+    color: #606060;
+    border:solid #e7e6e6 1px;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+.pic-code-phoneNum {
+    width: 90px;
+}

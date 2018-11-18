@@ -1,0 +1,92 @@
+.contract .pagination>li>a, .contract .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 12px 17px;
+    margin-left: -1px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #d6d6d6;
+    font-size: 15px;
+}
+.contract .pagination>.active>a,
+.contract .pagination>.active>a:focus,
+.contract .pagination>.active>a:hover,
+.contract .pagination>.active>span,
+.contract .pagination>.active>span:focus,
+.contract .pagination>.active>span:hover {
+    z-index: 2;
+    color: #fefefe;
+    cursor: default;
+    background-color: #ff5555;
+}
+.contract{
+    width:960px;
+    min-height:1440px;
+    padding: 0 58px 0 54px;
+    background: #fff;
+}
+.contract h2{
+    font-size:22px;
+    color:#767676;
+    line-height: 84px;
+    font-weight: normal;
+}
+.contract .download{
+    height:90px;
+    padding-top: 26px;
+    width:100%;
+}
+.contract .download button{
+    float: right;
+    width:128px;
+    height:46px;
+    color:#1d93e6;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 4px;
+    line-height: 46px;
+    border: 1px solid #1d93e6;
+    background: #fff;
+}
+.contract table{
+    width:100%;
+}
+.contract  tr{
+    background: #f6f6f6;
+    height:64px;
+    text-align: center;
+    font-size: 18px;
+    color:#999999;
+}
+.contract  tr a{
+    color:#999999;
+}
+/*.contract  tr td:nth-of-type(1){
+    width:78px;
+}*/
+.contract  tr td:last-child{
+    width:212px;
+}
+.contract table input[type=checkbox]{
+    width:16px;
+    height:16px;
+    border-radius: 4px;
+    background: #ebebeb;
+    border: 1px solid #d0d0d0;
+}
+.contract tbody tr:hover{
+   background: #fff;
+}
+.checkbox{
+    width: 18px;
+    height: 17px;
+    display: block;
+    background:url(../img/xuan-icon.png)  no-repeat;
+    cursor: pointer;
+    margin-right:5px;
+
+}
+.checked{
+    background:url(../img/xuanicon.png) no-repeat;
+
+}

@@ -1,0 +1,29 @@
+.content{
+    width: 925px;
+    height: auto;
+    background: #ffffff;
+}
+.content-title{
+    width: 100%;
+    height: 76px;
+    margin-top: 50px;
+    line-height: 76px;
+    font-size: 30px;
+    color: #656565;
+    border-bottom: solid 1px #e2e2e2;
+}
+.introduce-text{
+    width: 100%;
+    height: 208px;
+    font-size: 18px;
+    color: #757575;
+    margin-top: 36px;
+    line-height: 30px;
+}
+.content-address{
+    width: 100%;
+    height: 20px;
+    margin-top: 42px;
+    font-size: 18px;
+    color: #757575;
+}

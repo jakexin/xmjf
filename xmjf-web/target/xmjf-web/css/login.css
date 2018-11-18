@@ -1,0 +1,213 @@
+
+    .login-content {
+        background: #efefef;
+        width: 100%;
+        height: 615px;
+        min-width: 1240px;
+        padding: 1px;
+    }
+    .login-content-center{
+        width: 1200px;
+        height: 555px;
+        margin: 20px auto;
+    }
+    .login-box{
+        background: #ffffff;
+        width: 477px;
+        height: 555px;
+        float: right;
+        border-left: solid 1px #e3e3e3;
+    }
+    .box-title{
+        width: 477px;
+        height: 100px;
+        font-size: 22px;
+        line-height: 100px;
+        text-align: center;
+        color: #606060;
+    }
+    .box-input{
+        width: 477px;
+    }
+    .box-input-center{
+        width: 340px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .login-input{
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+        line-height: 48px;
+        color: #606060;
+        border:solid #e7e6e6 1px;
+        border-radius: 3px;
+        padding-left: 94px;
+    }
+    input::-webkit-input-placeholder { /* WebKit browsers */   color:#d2d2d2;   }
+    .login_input_wrap{
+        width: 340px;
+        height: 48px;
+        position: relative;
+        margin-top: 10px;
+    }
+    .login_input_wrap:before{
+        content:'账号';
+        display: inline-block;
+        position: absolute;
+        height:100%;
+        line-height: 48px;
+        width:66px;
+        text-align: right;
+        font-size: 18px;
+        color:#606060;
+        left:0;
+        top:0;
+    }
+    .login_input_password{
+        width: 340px;
+        height: 48px;
+        position: relative;
+        margin-top: 10px;
+    }
+    .login_input_password:before{
+        content:'密码';
+        display: inline-block;
+        position: absolute;
+        height:100%;
+        line-height: 48px;
+        width:66px;
+        text-align: right;
+        font-size: 18px;
+        color:#606060;
+        left:0;
+        top:0;
+    }
+    .keep-password{
+        width: 100%;
+        height: 30px;
+        margin-top: 10px;
+    }
+    .checkbox{
+        width: 20px;
+        height: 20px;
+        border: solid 1px #e7e6e6;
+        float: left;
+    }
+    .keep-text{
+        width: 90px;
+        height: 30px;
+        float: left;
+        line-height: 26px;
+        color: #606060;
+        padding-left: 4px;
+    }
+    .sliding{
+        width: 100%;
+        height: 48px;
+        border: solid 1px #e7e6e6;
+        border-radius:3px ;
+        margin-top: 10px;
+    }
+    .sliding-button{
+        background: #ebebeb;
+        width: 48px;
+        height: 47px;
+        border-right: solid 1px #e7e6e6;
+        line-height: 47px;
+        color: #c3c3c3;
+        text-align: center;
+        font-weight: bold;
+
+    }
+    .forget-passwrod-center{
+        width: 340px;
+        height: 34px;
+        margin: 0 auto;
+    }
+    .forget-passwrod{
+        width: 100%;
+        height: 34px;
+        color: #ff5e5e;
+        text-align: right;
+    }
+    .login-but{
+        width: 100%;
+        height: 46px;
+    }
+    .login-but-center{
+        width: 340px;
+        height: 46px;
+        margin: 0 auto;
+    }
+    .but{
+        width: 100%;
+        height: 100%;
+        background: #fcb22f;
+        border: none;
+        border-radius: 3px;
+        text-align: center;
+        line-height: 46px;
+        color: #ffffff;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .function{
+        width: 100%;
+        height: 54px;
+    }
+    .function-center{
+        width: 340px;
+        height: 55px;
+        margin: 0 auto  ;
+    }
+    .function-register{
+        width: 146px;
+        height: 55px;
+        color: #606060;
+        float: left;
+        line-height: 55px;
+        font-size: 16px;
+    }
+    .quick{
+        width: 112px;
+        height: 55px;
+        float: right;
+        font-size: 16px;
+        line-height: 55px;
+        text-align: right;
+        color: #606060;
+        cursor: pointer;
+    }
+    .third-login2{
+        width: 340px;
+        height: 92px;
+        text-align: left!important;
+        margin:0 auto;
+        position: relative;
+    }
+
+    .third-login2 .buts-weibo2{
+        width: 33.3%;
+        height: 92px;
+        position: absolute;
+        cursor: pointer;
+    }
+    .buts-weibo2:nth-of-type(1) {
+        background: url(/img/weibo.png) no-repeat center;
+        left:0;
+
+    }
+    .buts-weibo2:nth-of-type(2) {
+        background: url(/img/weixin.png) no-repeat center;
+        left:50%;
+        margin-left: -50px;
+    }
+    .buts-weibo2:nth-of-type(3) {
+        background: url(/img/QQ.png) no-repeat center;
+        right:0;
+    }
+.whole-img{
+    width: 720px;
+    float: left;
+}

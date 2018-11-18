@@ -1,0 +1,205 @@
+.user_siderbar{
+    width:240px;
+    min-height:1440px;
+    border-right: 1px solid #e5e5e5;
+    background: #fff;
+    padding:46px 0;
+}
+.user_siderbar .top_header{
+    height:326px;
+    border-bottom: 1px solid #e5e5e5;
+    padding:0 28px;
+    position: relative;
+
+}
+.user_siderbar .portrait{
+    height:140px;
+    background-size: 140px 140px;
+    background: url(/img/portrait.png) no-repeat center;
+}
+.user_siderbar .text{
+    line-height: 32px;
+    height:32px;
+    font-size:16px;
+    color:#a5a5a5;
+    text-indent: 14px;
+}
+.user_siderbar .rechargeWays{
+    height:70px;
+    padding:10px 0;
+}
+.user_siderbar .rechargeWays li{
+    width:40px;
+    height:60px;
+    float: left;
+    margin-right: 6px;
+    background-size:contain!important;
+    cursor: pointer;
+    position: relative;
+
+
+}
+.user_siderbar .rechargeWays li:nth-of-type(1){
+    background: url(/img/recharge_way1.png) no-repeat;
+}
+.user_siderbar .rechargeWays li:nth-of-type(2){
+    background: url(/img/recharge_way2.png) no-repeat;
+}
+.user_siderbar .rechargeWays li:nth-of-type(3){
+    background: url(/img/recharge_way3.png) no-repeat;
+}
+.user_siderbar .rechargeWays li:nth-of-type(4){
+    background: url(/img/recharge_way4.png) no-repeat;
+    margin-right: 0;
+}
+
+.user_siderbar .rechargeWays .liAcive:nth-of-type(1){
+    background: url(/img/shimingrenzheng2.png) no-repeat;
+}
+.user_siderbar .rechargeWays .liAcive:nth-of-type(3){
+    background: url(/img/yinhangka.png) no-repeat;
+}
+.user_siderbar .rechargeWays .liAcive:nth-of-type(4){
+    background: url(/img/vip.png) no-repeat;
+    margin-right: 0;
+}
+.user_siderbar .button_area{
+    padding-top:4px;
+}
+.button_area input{
+    width:86px;
+    height:36px;
+    border-radius: 4px;
+    line-height: 36px;
+    border: 1px solid #dcdcdc;
+    font-size: 16px;
+    color:#b7b7b7;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+}
+.button_area input.button_active{
+    background: #fcb22f;
+    color:#fff;
+    border: 1px solid #fcb22f;
+
+}
+.user_siderbar .nav_classify:first-child{
+    padding-bottom:24px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.user_siderbar .nav_classify .nav_head{
+    height:60px;
+    line-height: 60px;
+    padding-left: 82px;
+    color:#a1a1a1;
+    font-size:18px;
+    position: relative;
+}
+.user_siderbar .nav_classify .wallet:before{
+    content:url(/img/wallet.png);
+    position: absolute;
+    width:30px;
+    height:100%;
+    left:52px;
+    top:3px;
+}
+.user_siderbar .nav_classify .manage:before{
+    content:url(/img/manage.png);
+    position: absolute;
+    width:30px;
+    height:100%;
+    left:52px;
+    top:3px;
+}
+.user_siderbar .nav_classify a{
+    display: inline-block;
+    height:60px;
+    line-height: 60px;
+    padding-left: 82px;
+    color:#818181;
+    font-size:18px;
+    position: relative;
+    width:100%;
+}
+.user_siderbar .nav_classify a:hover,.user_siderbar .nav_classify a.user_active{
+    background: #ffecc9;
+    color:#faa30a;
+}
+.user_siderbar .nav_classify a:hover:after,.user_siderbar .nav_classify a.user_active:after{
+    content:url(/img/xiaotubiao.png);
+    width:20px;
+    height:20px;
+    display: inline-block;
+    position: absolute;
+    right:60px;
+    top:4px;
+}
+.siderTips{
+    height:40px;
+    border:1px solid #e1e1e1;
+    line-height: 40px;
+    color:#adadad;
+    font-size: 14px;
+    position: absolute;
+    top:50px;
+    background: #fff;
+    box-shadow:0 0 1px rgba(0,0,0,0.2);
+	text-align: center;
+    display: none;
+}
+.siderTips a{
+    color:#3bb7ff;
+}
+.siderTips a:hover{
+    text-decoration: underline;
+}
+.siderTips:after{
+    content:url(/img/sanjiao.png);
+    display: inline-block;
+    position: absolute;
+    width:12px;
+    height:10px;
+    left:50%;
+    top:-25px;
+}
+#bankTips,#realnameTips{
+    left:-90px;
+    width:210px;
+}
+#phoneTips{
+    left:-119px;
+    width:270px;
+}
+.messageBox_center{
+    display: inline-block;
+    width:35px;
+    height:35px;
+    position:absolute;
+    background: url(/img/xiaoxizhongxin.png) no-repeat center;
+    top:-28px;
+    right:14px;
+
+}
+
+ .pagination>li>a, .contract .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 12px 17px;
+    margin-left: -1px;
+    color: #fff!important;
+    text-decoration: none;
+    background-color: #d6d6d6!important;
+    font-size: 15px;
+}
+.pagination>.active>a,
+.pagination>.active>a:focus,
+ .pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    z-index: 2;
+    color: #fefefe!important;
+    cursor: default;
+    background-color: #ff5555!important;
+}

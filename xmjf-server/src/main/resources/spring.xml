@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+    <context:component-scan base-package="com.shsxt.xmjf"></context:component-scan>
+    <!-- 配置数据源 -->
+    <!-- 配置c3p0 数据源 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driver}"></property>
+        <property name="jdbcUrl" value="${jdbc.url}"></property>
+        <property name="user" value="${jdbc.username}"></property>
+        <property name="password" value="${jdbc.password}"></property>
+    </bean>
+    <!-- 配置事务管理器 -->
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <!-- 设置事务增强 -->
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="find*" read-only="true"/>
+            <tx:method name="query*" read-only="true"/>
+            <tx:method name="load*" read-only="true"/>
+            <tx:method name="add*" propagation="REQUIRED"/>
+            <tx:method name="insert*" propagation="REQUIRED"/>
+            <tx:method name="update*" propagation="REQUIRED"/>
+            <tx:method name="del*" propagation="REQUIRED"/>
+            <tx:method name="save*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+    <!-- aop 切面配置 -->
+    <aop:config>
+        <aop:pointcut id="servicePointcut" expression="execution(* com.shsxt.xmjf.server.service.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="servicePointcut"/>
+    </aop:config>
+    <!-- 配置 sqlSessionFactory -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="configLocation" value="classpath:mybatis.xml"></property>
+        <property name="mapperLocations" value="classpath:com/shsxt/xmjf/server/db/mappers/*.xml"/>
+    </bean>
+
+    <!-- 配置扫描器 -->
+    <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--  扫描com.shsxt.dao这个包以及它的子包下的所有映射接口类 -->
+        <property name="basePackage" value="com.shsxt.xmjf.server.db.dao"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+
+    <!-- Redis连接池配置 -->
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <!-- 最大连接数  -->
+        <property name="maxTotal" value="1024"/>
+        <!-- 最大 空闲连接数 -->
+        <property name="maxIdle" value="200"/>
+        <!-- 获取连接时最大等待毫秒数 -->
+        <property name="maxWaitMillis" value="10000"/>
+        <!-- 在获取连接时检查有效性 -->
+        <property name="testOnBorrow" value="true"/>
+    </bean>
+
+    <!-- Redis客户端连接工厂 -->
+    <bean id="jedisConnFactory"
+          class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
+          p:use-pool="true" p:host-name="192.168.132.10" p:port="6379" p:password="123456">
+        <!-- 连接池引用 -->
+        <constructor-arg name="poolConfig" ref="jedisPoolConfig"/>
+    </bean>
+
+    <!-- redisTemplate 配置 -->
+    <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+          p:connection-factory-ref="jedisConnFactory">
+        <!-- 配置序列化操作 -->
+        <property name="keySerializer">
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>
+        </property>
+        <property name="valueSerializer">
+            <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"/>
+        </property>
+        <property name="hashKeySerializer">
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>
+        </property>
+        <property name="hashValueSerializer">
+            <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"/>
+        </property>
+    </bean>
+
+    <!--
+        配置dubbo 服务提供方 计算依赖关系
+   -->
+    <dubbo:application name="xmjf-server-provider"/>
+    <!--
+      zookeeper 注册中心  暴露服务地址
+    -->
+    <dubbo:registry protocol="zookeeper" timeout="30000" address="zookeeper://127.0.0.1:2181"></dubbo:registry>
+    <dubbo:protocol name="dubbo" port="20880"/>
+    <dubbo:service interface="com.shsxt.xmjf.api.service.UserServiceI" ref="userServiceImpl"></dubbo:service>
+    <dubbo:service interface="com.shsxt.xmjf.api.service.SmsServiceI" ref="smsServiceImpl"></dubbo:service>
+    <dubbo:service interface="com.shsxt.xmjf.api.service.BasItemServiceI" ref="basItemServiceImpl"></dubbo:service>
+    <dubbo:service interface="com.shsxt.xmjf.api.service.BusAccountServiceI" ref="busAccountServiceImpl"></dubbo:service>
+    <dubbo:service interface="com.shsxt.xmjf.api.service.BasUserSecurityServiceI" ref="basUserSecurityServiceImpl"></dubbo:service>
+    <dubbo:service interface="com.shsxt.xmjf.api.service.BusItemLoanServiceI" ref="basItemLoanServiceImpl"></dubbo:service>
+    <dubbo:service interface="com.shsxt.xmjf.api.service.SysPictureServiceI" ref="sysPictureServiceImpl"></dubbo:service>
+    <dubbo:service interface="com.shsxt.xmjf.api.service.BusAccountRechargeServiceI" ref="busAccountRechargeServiceImpl"></dubbo:service>
+    <dubbo:service interface="com.shsxt.xmjf.api.service.BusItemInvestServiceI" ref="busItemInvestServiceImpl"></dubbo:service>
+</beans>

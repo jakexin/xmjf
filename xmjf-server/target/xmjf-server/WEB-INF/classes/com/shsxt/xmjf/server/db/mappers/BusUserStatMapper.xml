@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shsxt.xmjf.server.db.dao.BusUserStatMapper" >
+  <resultMap id="BaseResultMap" type="com.shsxt.xmjf.api.po.BusUserStat" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <id column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="recharge_count" property="rechargeCount" jdbcType="INTEGER" />
+    <result column="recharge_amount" property="rechargeAmount" jdbcType="DECIMAL" />
+    <result column="cash_count" property="cashCount" jdbcType="INTEGER" />
+    <result column="cash_amount" property="cashAmount" jdbcType="DECIMAL" />
+    <result column="invest_count" property="investCount" jdbcType="INTEGER" />
+    <result column="invest_amount" property="investAmount" jdbcType="DECIMAL" />
+    <result column="invest_lave_amount" property="investLaveAmount" jdbcType="DECIMAL" />
+    <result column="coupon_count" property="couponCount" jdbcType="INTEGER" />
+    <result column="coupon_amount" property="couponAmount" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, user_id, recharge_count, recharge_amount, cash_count, cash_amount, invest_count, 
+    invest_amount, invest_lave_amount, coupon_count, coupon_amount
+  </sql>
+  <select id="queryById" resultMap="BaseResultMap" parameterType="com.shsxt.xmjf.api.po.BusUserStatKey" >
+    select 
+    <include refid="Base_Column_List" />
+    from bus_user_stat
+    where id = #{id,jdbcType=INTEGER}
+      and user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <insert id="save" parameterType="com.shsxt.xmjf.api.po.BusUserStat" >
+    insert into bus_user_stat
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="rechargeCount != null" >
+        recharge_count,
+      </if>
+      <if test="rechargeAmount != null" >
+        recharge_amount,
+      </if>
+      <if test="cashCount != null" >
+        cash_count,
+      </if>
+      <if test="cashAmount != null" >
+        cash_amount,
+      </if>
+      <if test="investCount != null" >
+        invest_count,
+      </if>
+      <if test="investAmount != null" >
+        invest_amount,
+      </if>
+      <if test="investLaveAmount != null" >
+        invest_lave_amount,
+      </if>
+      <if test="couponCount != null" >
+        coupon_count,
+      </if>
+      <if test="couponAmount != null" >
+        coupon_amount,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="rechargeCount != null" >
+        #{rechargeCount,jdbcType=INTEGER},
+      </if>
+      <if test="rechargeAmount != null" >
+        #{rechargeAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="cashCount != null" >
+        #{cashCount,jdbcType=INTEGER},
+      </if>
+      <if test="cashAmount != null" >
+        #{cashAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="investCount != null" >
+        #{investCount,jdbcType=INTEGER},
+      </if>
+      <if test="investAmount != null" >
+        #{investAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="investLaveAmount != null" >
+        #{investLaveAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="couponCount != null" >
+        #{couponCount,jdbcType=INTEGER},
+      </if>
+      <if test="couponAmount != null" >
+        #{couponAmount,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="update" parameterType="com.shsxt.xmjf.api.po.BusUserStat" >
+    update bus_user_stat
+    <set >
+      <if test="rechargeCount != null" >
+        recharge_count = #{rechargeCount,jdbcType=INTEGER},
+      </if>
+      <if test="rechargeAmount != null" >
+        recharge_amount = #{rechargeAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="cashCount != null" >
+        cash_count = #{cashCount,jdbcType=INTEGER},
+      </if>
+      <if test="cashAmount != null" >
+        cash_amount = #{cashAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="investCount != null" >
+        invest_count = #{investCount,jdbcType=INTEGER},
+      </if>
+      <if test="investAmount != null" >
+        invest_amount = #{investAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="investLaveAmount != null" >
+        invest_lave_amount = #{investLaveAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="couponCount != null" >
+        coupon_count = #{couponCount,jdbcType=INTEGER},
+      </if>
+      <if test="couponAmount != null" >
+        coupon_amount = #{couponAmount,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+      and user_id = #{userId,jdbcType=INTEGER}
+  </update>
+
+  <select id="queryBusUserStatByUserId" resultMap="BaseResultMap">
+      select <include refid="Base_Column_List"/>
+      from bus_user_stat
+      where user_id=#{userId}
+  </select>
+</mapper>

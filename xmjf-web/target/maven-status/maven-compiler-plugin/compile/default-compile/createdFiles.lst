@@ -1,0 +1,11 @@
+com\shsxt\xmjf\web\GlobalExceptionResolver.class
+com\shsxt\xmjf\web\controller\BasItemController.class
+com\shsxt\xmjf\web\controller\AlipayController.class
+com\shsxt\xmjf\web\proxy\NoAccessPorxy.class
+com\shsxt\xmjf\web\controller\AccountController.class
+com\shsxt\xmjf\web\controller\BusItemInvestController.class
+com\shsxt\xmjf\web\controller\ImageController.class
+com\shsxt\xmjf\web\controller\IndexController.class
+com\shsxt\xmjf\web\controller\SmsController.class
+com\shsxt\xmjf\web\controller\UserController.class
+com\shsxt\xmjf\web\anntations\IsLogin.class

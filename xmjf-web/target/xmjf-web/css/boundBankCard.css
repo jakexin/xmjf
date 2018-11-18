@@ -1,0 +1,152 @@
+.content {
+    background: #ffffff;
+    width: 960px;
+    min-height: 1440px;
+}
+
+.redPackets-top {
+    width: 100%;
+    height: 216px;
+}
+
+.redPackets-title {
+    width: 100%;
+    height: 80px;
+}
+
+.redPackets-title-left {
+    width: 196px;
+    height: 80px;
+    float: left;
+    line-height: 80px;
+    color: #767676;
+    text-align: center;
+    font-size: 22px;
+    padding-left: 27px;
+}
+.boundBank-input{
+    width: 100%;
+    height: 72px;
+}
+.boundBank-input-text{
+    width: 202px;
+    text-align: right;
+    line-height: 72px;
+    font-size: 18px;
+    color: #767676;
+    float: left;
+}
+.boundBank-but{
+    width: 100%;
+    height: 70px;
+}
+.but{
+    width: 248px;
+    height: 48px;
+    background: #ff5555;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-left: 212px;
+    float: left;
+    font-size: 18px;
+    font-family: 微软雅黑;
+    cursor: pointer;
+}
+.prompt{
+    width: 100%;
+    height: 170px;
+    margin-top: 80px;
+}
+.prompt-content{
+    width: 800px;
+    height: 166px;
+    margin-left: 58px;
+}
+.prompt-content-title{
+    width: 100%;
+    height: 54px;
+    font-size: 20px;
+    color: #737373;
+    font-family: 微软雅黑;
+    line-height: 70px;
+}
+.prompt-content-text{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+}
+.prompt-content-img{
+    width: 18px;
+    height: 30px;
+    float: left;
+}
+.prompt-text{
+    width: 760px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    float: left;
+    font-size: 16px;
+    color: #848383;
+    font-family: 微软雅黑;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

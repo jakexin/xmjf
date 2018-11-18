@@ -1,0 +1,183 @@
+.content{
+    width: 960px;
+    height: 1440px;
+    background: #ffffff;
+}
+.recharge-title{
+    width: 960px;
+    height: 88px;
+}
+.recharge-title-left{
+    width: 154px;
+    height: 88px;
+    line-height:70px;
+    text-align: center;
+    font-size: 22px;
+    color: #767676;
+    font-family: 微软雅黑;
+    float: left;
+}
+.recharge-title-right{
+    width: 200px;
+    height: 88px;
+    float: right;
+}
+.record-but{
+    width: 110px;
+    height: 40px;
+    margin: 46px auto;
+}
+.but{
+    width: 110px;
+    height: 40px;
+    border: solid 1px #ff5555;
+    background: #ffffff;
+    border-radius: 3px;
+    color: #ff5555;
+    font-size: 18px;
+    font-family: 微软雅黑;
+    cursor: pointer;
+}
+.can-withdrawals{
+    width: 827px;
+    height: 70px;
+    margin: 0 auto;
+    line-height: 70px;
+    font-size: 18px;
+    color: #767676;
+    font-family: 微软雅黑;
+}
+.withdrawals{
+    width: 827px;
+    height: 66px;
+    margin: 0 auto;
+}
+.withdrawals-text{
+    width: 94px;
+    height: 66px;
+    line-height: 60px;
+    font-size: 18px;
+    color: #767676;
+    font-family: 微软雅黑;
+    float: left;
+}
+.recharge-input{
+    width: 244px;
+    height: 48px;
+    border: solid 1px #cfcfcf;
+    border-radius: 3px;
+    padding-right: 50px;
+    font-size: 18px;
+    font-family: 微软雅黑;
+    color: #767676;
+    padding-left: 10px;
+}
+.recharge_input_wrap{
+    width: 244px;
+    height: 48px;
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+.recharge_input_wrap:before{
+    content:'元';
+    display: inline-block;
+    position: absolute;
+    height:100%;
+    width:66px;
+    text-align: right;
+    line-height: 48px;
+    font-size: 18px;
+    color:#606060;
+    left: 156px;
+    top:0;
+    font-family: 微软雅黑;
+}
+.bankCrad{
+    width: 860px;
+    height: 66px;
+    margin: 6px auto;
+}
+.bankCrad-text{
+    width: 122px;
+    height: 66px;
+    float: left;
+    font-size: 18px;
+    color: #767676;
+    line-height: 66px;
+    font-family: 微软雅黑;
+}
+.bankCrad-img{
+    width: 262px;
+    height: 68px;
+    float: left;
+}
+.withdrawals-but{
+    width: 860px;
+    height: 70px;
+    margin: 0 auto;
+}
+.butwithdrawals{
+    width: 160px;
+    height: 48px;
+    border: none;
+    border-radius: 3px;
+    background: #ff5555;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 微软雅黑;
+    margin-left: 120px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.prompt{
+    width: 100%;
+    height: 170px;
+    margin-top: 80px;
+}
+.prompt-content{
+    width: 800px;
+    height: 166px;
+    margin-left: 58px;
+}
+.prompt-content-title{
+    width: 100%;
+    height: 54px;
+    font-size: 20px;
+    color: #737373;
+    font-family: 微软雅黑;
+    line-height: 70px;
+}
+.prompt-content-text{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+}
+.prompt-content-img{
+    width: 18px;
+    height: 30px;
+    float: left;
+}
+.prompt-text{
+    width: 728px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    float: left;
+    font-size: 16px;
+    color: #848383;
+    font-family: 微软雅黑;
+}
+.bankCrad-code{
+    width: 82px;
+    height: 42px;
+    float: left;
+    line-height: 42px;
+    margin-top: 10px;
+    border: solid 1px #ff5555;
+    border-left: none;
+    font-size: 15px;
+    color: #949494;
+    text-align: center;
+}

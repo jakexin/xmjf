@@ -1,0 +1,111 @@
+.friends .pagination>li>a, .contract .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 12px 17px;
+    margin-left: -1px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #d6d6d6;
+    font-size: 15px;
+}
+.friends .pagination>.active>a,
+.friends .pagination>.active>a:focus,
+.friends .pagination>.active>a:hover,
+.friends .pagination>.active>span,
+.friends .pagination>.active>span:focus,
+.friends .pagination>.active>span:hover {
+    z-index: 2;
+    color: #fefefe;
+    cursor: default;
+    background-color: #ff5555;
+}
+.friends{
+    width:960px;
+    min-height:1440px;
+    background: #fff;
+}
+.friends h2{
+    font-size:22px;
+    color:#767676;
+    line-height: 84px;
+    text-indent: 44px;
+    font-weight: normal;
+}
+.friends_top{
+    position: relative;
+    height:586px;
+    margin:0 16px 0 12px;
+    border-bottom: 1px dashed #e9e9e9;
+}
+.friends_top .ways{
+    padding-left:46px;
+}
+.friends_top .ways div{
+    float: left;
+}
+.friends_top .ways .invite_code{
+    line-height: 50px;
+    font-size: 20px;
+    color:#7e7e7e;
+    margin-top: 30px;
+    width:532px;
+}
+.friends_top .ways .invite_code input{
+    text-align: center;
+    font-size: 22px;
+    color:#ff6262;
+    border: 1px solid #ff6262;
+    width:220px;
+    margin: 0 32px 0 6px;
+    height:50px;
+    line-height: 50px;
+    border-radius: 4px;
+
+}
+.friends_top .ways .invite_code .copy{
+    color:#ff6262;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+.friends_top .ways  div[class^=invites_]{
+    width:74px;
+    margin-right: 40px;
+    font-size: 16px;
+    color:#9b9b9b;
+    line-height: 26px;
+    padding-top: 62px;
+}
+.friends_top .ways  div.invites_weibo{
+    background: url(/img/weibo.png) no-repeat;
+}
+.friends_top .ways  div.invites_wechat{
+    background: url(/img/weixin.png) no-repeat;
+}
+.friends_top .ways  div.invites_QQ{
+    background: url(/img/QQ.png) no-repeat;
+}
+.invite_list h2{
+    color:#5f5f5f;
+    font-size: 18px;
+    line-height: 62px;
+    margin-top: 16px;
+    text-indent: 70px;
+}
+.invite_list table{
+    width:812px;
+    margin-left: 70px;
+    font-size: 16px;
+
+}
+.invite_list thead tr{
+    background: #f1f1f1;
+    height:46px;
+    font-weight: normal;
+    color:#6c6c6c;
+}
+.invite_list tbody tr{
+    color:#666666;
+    height:58px;
+    text-align: center;
+}

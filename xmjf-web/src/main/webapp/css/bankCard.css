@@ -1,0 +1,290 @@
+.content {
+    background: #ffffff;
+    width: 960px;
+    min-height: 1440px;
+}
+
+.redPackets-top {
+    width: 100%;
+    height: 216px;
+}
+
+.redPackets-title {
+    width: 100%;
+    height: 80px;
+}
+
+.redPackets-title-left {
+    width: 196px;
+    height: 80px;
+    float: left;
+    line-height: 80px;
+    color: #767676;
+    text-align: center;
+    font-size: 22px;
+    padding-left: 27px;
+}
+.add{
+    width: 100%;
+    height: 292px;
+    padding: 1px;
+}
+.add-bankCard{
+    background: #f4f4f4;
+    width: 352px;
+    height: 208px;
+    margin-left: 56px;
+    margin-top: 20px;
+}
+.add-bankCard-top{
+    width: 100%;
+    height: 82px;
+}
+.bankCard-top-img{
+    float: right;
+    margin-right: 32px;
+    margin-top: 34px;
+}
+.add-bankCard-but{
+    width: 68px;
+    height: 44px;
+    margin: 0 auto;
+}
+.add-bankCard-text{
+    width: 100%;
+    height: 82px;
+    font-size: 18px;
+    color: #ff5555;
+    text-align: center;
+    line-height: 82px;
+}
+.prompt{
+    width: 100%;
+    height: 170px;
+    margin-top: 80px;
+}
+.prompt-content{
+    width: 800px;
+    height: 166px;
+    margin-left: 58px;
+}
+.prompt-content-title{
+    width: 100%;
+    height: 54px;
+    font-size: 20px;
+    color: #737373;
+    font-family: 微软雅黑;
+    line-height: 70px;
+}
+.prompt-content-text{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+}
+.prompt-content-img{
+    width: 18px;
+    height: 30px;
+    float: left;
+}
+.prompt-text{
+    width: 760px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    float: left;
+    font-size: 16px;
+    color: #848383;
+    font-family: 微软雅黑;
+}
+.bankCard{
+    background: #ff7374;
+    width: 350px;
+    height: 206px;
+    margin-left: 56px;
+    border: none;
+    border-radius: 5px;
+    padding: 1px;
+    float: left;
+}
+.bankCard-blue{
+    background: #2c7cbf;
+    width: 350px;
+    height: 206px;
+    margin-left: 56px;
+    border: none;
+    border-radius: 5px;
+    padding: 1px;
+    float: left;
+}
+.bankCard-org{
+    background: #f37834;
+    width: 350px;
+    height: 206px;
+    margin-left: 56px;
+    border: none;
+    border-radius: 5px;
+    padding: 1px;
+    float: left;
+}
+.bankCard-green{
+    background: #2fb379;
+    width: 350px;
+    height: 206px;
+    margin-left: 56px;
+    border: none;
+    border-radius: 5px;
+    padding: 1px;
+    float: left;
+}
+.bankCard-title{
+    width: 100%;
+    height: 58px;
+    margin-top: 34px;
+}
+.bankCard-title-icon{
+    width: 84px;
+    height: 58px;
+    float: left;
+}
+.bankCard-text{
+    width: 264px;
+    height: 58px;
+    float: left;
+    font-size: 22px;
+    color: #ffffff;
+}
+.bankCard-num{
+    width: 100%;
+    height: 118px;
+    line-height: 118px;
+    text-align: center;
+    font-size: 28px;
+    color: #ffffff;
+}
+.limit{
+    width: 308px;
+    height: 206px;
+    border: solid 1px #dbdbdb;
+    float: left;
+    border-radius: 5px;
+    margin-left: 52px;
+}
+.limit-title{
+    width: 100%;
+    height: 44px;
+    background: #eaeaea;
+    font-size: 16px;
+    color: #545454;
+    line-height: 44px;
+    padding-left: 30px;
+}
+.limit-whole{
+    width: 100%;
+    height: 54px;
+    border-bottom: solid 1px #e5e5e5;
+    line-height: 54px;
+    font-size: 16px;
+    color: #868686;
+    padding-left: 30px;
+}
+
+.popup{
+    position: absolute;
+    width: 560px;
+    height: 235px;
+    left: 50%;
+    margin-left: -280px;
+    z-index: 9999;
+    top: 500px;
+    border-radius: 5px;
+}
+.popup-title{
+    height: 60px;
+    background: #FCB22F;
+    padding: 18px;
+    border-top-left-radius:  5px;
+    border-top-right-radius: 5px;
+
+}
+.popup-title span{
+    font-size: 18px;
+    color:#ffffff;
+}
+.popup-title img{
+    float: right;
+    cursor: pointer;
+}
+.popup-content{
+    background: #ffffff;
+    height: 175px;
+    border-bottom-left-radius:  5px;
+    border-bottom-right-radius: 5px;
+}
+.popup-content span{
+    font-size: 16px;
+    text-align: center;
+    line-height: 70px;
+    display: block;
+}
+.popup-botton{
+    text-align: center;
+    margin-top: 10px;
+}
+.popup-botton button{
+    margin-right: 25px;
+    width: 160px;
+    height: 50px;
+    background: #F5F5F5;
+    font-size: 16px;
+    border: 1px #E2E2E2 solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.rebox{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    z-index:2;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+.content{
+    width: 960px;
+    height: 1440px;
+    background: #ffffff;
+}
+.recharge-title{
+    width: 960px;
+    height: 98px;
+}
+.recharge-title-left{
+    width: 154px;
+    height: 98px;
+    line-height:70px;
+    text-align: center;
+    font-size: 22px;
+    color: #767676;
+    font-family: 微软雅黑;
+    float: left;
+    margin-left: 26px;
+}
+.table-title{
+    width: 846px;
+    height: 50px;
+    background: #f1f1f1;
+    margin: 0 auto;
+}
+.table-title-first{
+    width: 250px;
+    height: 50px;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #6c6c6c;
+    font-family: 微软雅黑;
+}
+.table-title-center{
+    width: 340px;
+    height: 50px;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #6c6c6c;
+    font-family: 微软雅黑;
+}
+.table-content{
+    width: 846px;
+    height: 44px;
+    margin: 0 auto;
+}
+.table-content-first{
+    width: 250px;
+    height: 42px;
+    float: left;
+    line-height: 42px;
+    text-align: center;
+    font-size: 16px;
+    color: #818181;
+    font-family: 微软雅黑;
+}
+.table-content-center{
+    width: 340px;
+    height: 42px;
+    float: left;
+    line-height: 42px;
+    text-align: center;
+    font-size: 16px;
+    color: #818181;
+    font-family: 微软雅黑;
+}

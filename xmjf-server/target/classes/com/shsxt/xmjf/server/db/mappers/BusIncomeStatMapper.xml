@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shsxt.xmjf.server.db.dao.BusIncomeStatMapper" >
+  <resultMap id="BaseResultMap" type="com.shsxt.xmjf.api.po.BusIncomeStat" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="total_income" property="totalIncome" jdbcType="DECIMAL" />
+    <result column="wait_income" property="waitIncome" jdbcType="DECIMAL" />
+    <result column="earned_income" property="earnedIncome" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, user_id, total_income, wait_income, earned_income
+  </sql>
+  <select id="queryById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from bus_income_stat
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <insert id="save" parameterType="com.shsxt.xmjf.api.po.BusIncomeStat" >
+    insert into bus_income_stat
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="totalIncome != null" >
+        total_income,
+      </if>
+      <if test="waitIncome != null" >
+        wait_income,
+      </if>
+      <if test="earnedIncome != null" >
+        earned_income,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="totalIncome != null" >
+        #{totalIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="waitIncome != null" >
+        #{waitIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="earnedIncome != null" >
+        #{earnedIncome,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="update" parameterType="com.shsxt.xmjf.api.po.BusIncomeStat" >
+    update bus_income_stat
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="totalIncome != null" >
+        total_income = #{totalIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="waitIncome != null" >
+        wait_income = #{waitIncome,jdbcType=DECIMAL},
+      </if>
+      <if test="earnedIncome != null" >
+        earned_income = #{earnedIncome,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="queryBusIncomeStatByUserId" resultMap="BaseResultMap">
+      select <include refid="Base_Column_List"/>
+      from bus_income_stat
+      where user_id=#{userId}
+  </select>
+</mapper>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/xmjf-api/xmjf-api.iml" filepath="$PROJECT_DIR$/xmjf-api/xmjf-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xmjf-code/xmjf-code.iml" filepath="$PROJECT_DIR$/xmjf-code/xmjf-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xmjf-parent.iml" filepath="$PROJECT_DIR$/xmjf-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xmjf-server/xmjf-server.iml" filepath="$PROJECT_DIR$/xmjf-server/xmjf-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xmjf-web/xmjf-web.iml" filepath="$PROJECT_DIR$/xmjf-web/xmjf-web.iml" />
+    </modules>
+  </component>
+</project>
